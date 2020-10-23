@@ -1,5 +1,6 @@
 const input = document.getElementById("input");
 const invalid = document.getElementById("invalid");
+const output = document.getElementById("output");
 
 //to replace "_" with regex
 const wildCardRegex = /[_-]+/g;
@@ -7,9 +8,13 @@ const wildCardRegex = /[_-]+/g;
 let lastWordLength = 0;
 let words = [];
 
+function getInvalidChars() {
+    return invalid.value + input.value.replaceAll(wildCardRegex, "");
+}
+
 function getRegex() {
     //TODO: Umlauts Boolean
-    const invalidChars = "[^" + invalid.value + "]"; //TODO: Ignore chars in input.value too?
+    const invalidChars = "[^" + getInvalidChars() + "]"; //TODO: Ignore chars in input.value too?
     const regexStr = input.value.replaceAll(wildCardRegex, (s) => {
         return invalidChars + (s.length > 1 ? "{" + s.length + "}" : "");
     })
@@ -36,7 +41,7 @@ function updateWords() {
 function onWordsLoaded() {
     const regex = getRegex();
 
-    console.log(regex);
+    const invalidChars = getInvalidChars();
 
     const matches = [];
     const letters = new Map();
@@ -48,7 +53,7 @@ function onWordsLoaded() {
             const usedChars = [];
             for (let j = 0; j < words[i].length; j++) {
                 let char = words[i].charAt(j);
-                if (!arrayContains(usedChars, char)) {
+                if (!arrayOrStringContains(usedChars, invalidChars, char)) {
                     usedChars.push(char);
                     letters.set(char, letters.has(char) ? letters.get(char) + 1 : 1);
                 }
@@ -57,11 +62,24 @@ function onWordsLoaded() {
     }
 
     console.log(matches);
-    const lettersSorted = new Map([...letters.entries()].sort((a, b) => b[1] - a[1]));
-    console.log(lettersSorted);
+    console.log(letters);
+
+    let highestValue = -1;
+    let highestKey = undefined;
+    letters.forEach((value, key) => {
+        if (value > highestValue) {
+            highestValue = value;
+            highestKey = key;
+        }
+    });
+
+    output.innerHTML = "Probiere es mit: " + highestKey;
 }
 
-function arrayContains(arr, val) {
+function arrayOrStringContains(arr, str, val) {
+    if (str.indexOf(val) !== -1) {
+        return true;
+    }
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] === val) {
             return true;
