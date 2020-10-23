@@ -92,6 +92,7 @@ button:focus {
 .output {
     margin: auto 0 auto 3px;
     top: 50%;
+    color: white;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     position: relative;

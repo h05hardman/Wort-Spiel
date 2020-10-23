@@ -62,6 +62,11 @@ function onWordsLoaded() {
     }
 
     console.log(matches);
+    /*
+    // sort by value
+    const lettersSorted = new Map([...letters.entries()].sort((a, b) => b[1] - a[1]));
+    console.log(lettersSorted);
+     */
     console.log(letters);
 
     let highestValue = -1;
@@ -73,6 +78,7 @@ function onWordsLoaded() {
         }
     });
 
+    //TODO: Better print:
     output.innerHTML = "Probiere es mit: " + highestKey;
 }
 
