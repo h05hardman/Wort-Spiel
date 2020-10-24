@@ -1,6 +1,7 @@
 const input = document.getElementById("input");
 const invalid = document.getElementById("invalid");
 const output = document.getElementById("output");
+const umlautCheckbox = document.getElementById("has-umlauts");
 
 //to replace "_" with regex
 const wildCardRegex = /[_-]+/g;
@@ -23,11 +24,19 @@ function getRegex() {
     return new RegExp("^" + stringToLowerCase(regexStr) + "$", "u")
 }
 
+function hasUmlauts() {
+    return umlautCheckbox.checked;
+}
+
+function getWordsFolder() {
+    return hasUmlauts() ? "words/" : "words_only_a-z/";
+}
+
 let ready = true;
 //This gets called on button press
 function updateWords() {
     if (!ready) return;
-    
+
     ready = false;
     input.value = input.value.replaceAll(whiteSpaceRegex, "");
     const wordLength = input.value.length;
@@ -35,7 +44,7 @@ function updateWords() {
         onWordsLoaded();
     } else {
         const reader = new XMLHttpRequest() || new ActiveXObject("MSXML2.XMLHTTP");
-        reader.open("get", "words/" + wordLength + ".txt", true);
+        reader.open("get", getWordsFolder() + wordLength + ".txt", true);
         reader.onreadystatechange = function() {
             lastWordLength = wordLength;
             words = reader.responseText.split("\n");
@@ -91,5 +100,5 @@ function stringContainsIgnoreCase(str, val) {
 
 const bigSzRegex = /ẞ/g;
 function stringToLowerCase(str) {
-    return str.toLowerCase().replaceAll(bigSzRegex, "ß");
+    return hasUmlauts() ? str.toLowerCase().replaceAll(bigSzRegex, "ß") : str.toLowerCase();
 }
