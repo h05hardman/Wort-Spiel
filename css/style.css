@@ -25,10 +25,6 @@ body {
     background-color: #000000;
 }
 
-.fehler {
-    color:red;
-}
-
 .button {
     padding: 12px;
     box-sizing: border-box;
@@ -93,7 +89,7 @@ body {
 }
 
 .output {
-    margin: auto 0 auto 3px;
+    margin: auto 3px auto 0;
     top: 50%;
     color: white;
     -ms-transform: translateY(-50%);
@@ -109,4 +105,8 @@ body {
 
 .label {
     margin-bottom: 100px
+}
+
+#has-umlauts {
+    margin: auto 3px auto 0;
 }
