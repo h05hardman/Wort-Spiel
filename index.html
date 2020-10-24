@@ -8,15 +8,15 @@
 
 <body>
     <label class="label" for="input">Eingabe ("_" für nicht bekannte Buchstaben):</label><br>
-    <input id="input">
+    <input class="text-input" id="input">
     <br>
 
     <label class="label" for="invalid">Falsche Buchstaben:</label><br>
-    <input id="invalid">
+    <input class="text-input" id="invalid">
     <br>
 
     <br>
-    <button onclick="updateWords();">Enter</button>
+    <input type="button" class="button" id="submit" value="Enter" onclick="updateWords()" />
 
     <br>
     <div class="output" id="output"></div>

@@ -1,4 +1,4 @@
-input {
+.text-input {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -10,7 +10,7 @@ input {
     color: #fdfdfd;
 }
 
-input:focus {
+.text-input:focus {
     outline: none;
     border: 2px solid whitesmoke;
 }
@@ -29,7 +29,7 @@ body {
     color:red;
 }
 
-button {
+.button {
     padding: 12px;
     box-sizing: border-box;
     font-size: 20px;
@@ -40,9 +40,12 @@ button {
     float: right;
 }
 
-button:focus {
-    outline: none;
-    border: 2px solid whitesmoke;
+.button:hover {
+    border: 2px solid #58cfff;
+}
+
+.button:active {
+    border: 1px solid whitesmoke;
 }
 
 .output-text {

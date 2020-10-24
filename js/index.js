@@ -23,8 +23,12 @@ function getRegex() {
     return new RegExp("^" + stringToLowerCase(regexStr) + "$", "u")
 }
 
+let ready = true;
 //This gets called on button press
 function updateWords() {
+    if (!ready) return;
+    
+    ready = false;
     input.value = input.value.replaceAll(whiteSpaceRegex, "");
     const wordLength = input.value.length;
     if (lastWordLength === wordLength) {
@@ -78,6 +82,7 @@ function onWordsLoaded() {
     letterList = letterList.substring(0, letterList.length - 3) + "</div>";
     console.log(letterList);
     output.innerHTML = letterList;
+    ready = true;
 }
 
 function stringContainsIgnoreCase(str, val) {
