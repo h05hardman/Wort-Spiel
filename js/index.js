@@ -42,15 +42,15 @@ function updateWords() {
     ready = false;
     input.value = input.value.replaceAll(whiteSpaceRegex, "");
     const wordLength = input.value.length;
-    const hasUmlauts = hasUmlauts();
-    if (lastWordLength === wordLength && lastHasUmlauts === hasUmlauts) {
+    const umlautsBoo = hasUmlauts();
+    if (lastWordLength === wordLength && lastHasUmlauts === umlautsBoo) {
         onWordsLoaded();
     } else {
         const reader = new XMLHttpRequest() || new ActiveXObject("MSXML2.XMLHTTP");
         reader.open("get", getWordsFolder() + wordLength + ".txt", true);
         reader.onreadystatechange = function() {
             lastWordLength = wordLength;
-            lastHasUmlauts = hasUmlauts;
+            lastHasUmlauts = umlautsBoo;
             words = reader.responseText.split("\n");
             onWordsLoaded();
         };
