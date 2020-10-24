@@ -10,6 +10,7 @@ const wildCardRegex = /[_-]+/g;
 const whiteSpaceRegex = /\s+/g
 
 let lastWordLength = 0;
+let lastHasUmlauts = undefined;
 let words = [];
 
 function getInvalidChars() {
@@ -41,13 +42,15 @@ function updateWords() {
     ready = false;
     input.value = input.value.replaceAll(whiteSpaceRegex, "");
     const wordLength = input.value.length;
-    if (lastWordLength === wordLength) {
+    const hasUmlauts = hasUmlauts();
+    if (lastWordLength === wordLength && lastHasUmlauts === hasUmlauts) {
         onWordsLoaded();
     } else {
         const reader = new XMLHttpRequest() || new ActiveXObject("MSXML2.XMLHTTP");
         reader.open("get", getWordsFolder() + wordLength + ".txt", true);
         reader.onreadystatechange = function() {
             lastWordLength = wordLength;
+            lastHasUmlauts = hasUmlauts;
             words = reader.responseText.split("\n");
             onWordsLoaded();
         };
