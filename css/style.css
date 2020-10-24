@@ -89,12 +89,10 @@ body {
 }
 
 .output {
+    display:block;
     margin: auto 3px auto 0;
     top: 50%;
     color: white;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    position: relative;
 }
 
 .container {
@@ -109,4 +107,9 @@ body {
 
 #has-umlauts {
     margin: auto 3px auto 0;
+}
+
+.match-list {
+    max-height: 313px;
+    overflow: auto;
 }

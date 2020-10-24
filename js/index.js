@@ -1,6 +1,7 @@
 const input = document.getElementById("input");
 const invalid = document.getElementById("invalid");
-const output = document.getElementById("output");
+const letterOutput = document.getElementById("output");
+const wordOutput = document.getElementById("output2");
 const umlautCheckbox = document.getElementById("has-umlauts");
 
 //to replace "_" with regex
@@ -77,20 +78,26 @@ function onWordsLoaded() {
         }
     }
 
-    console.log(matches);
+    if (matches.length > 0) {
+        let matchList = matches.length + " passende Wörter:<ul class='match-list'>";
+        matches.forEach(val => {
+            matchList += "<li>" + val + "</li>";
+        });
+        wordOutput.innerHTML = matchList + "</ul>";
 
-    // sort by value
-    const lettersSorted = new Map([...letters.entries()].sort((a, b) => b[1] - a[1]));
-
-    let letterList = "<div class='letter-list'>\n";
-    //TODO: Better print:
-    lettersSorted.forEach(((value, key) => {
-        letterList += key + ": " + value + ", \n";
-    }));
-    //close div and remove last ", \n"
-    letterList = letterList.substring(0, letterList.length - 3) + "</div>";
-    console.log(letterList);
-    output.innerHTML = letterList;
+        // sort by value
+        const lettersSorted = new Map([...letters.entries()].sort((a, b) => b[1] - a[1]));
+        let letterList = "<div class='letter-list'>\n";
+        //TODO: Better print:
+        lettersSorted.forEach(((value, key) => {
+            letterList += key + ": " + value + ", ";
+        }));
+        //close div and remove last ", "
+        letterOutput.innerHTML = letterList.substring(0, letterList.length - 2) + "</div>";
+    } else {
+        letterOutput.innerHTML = "Keine Wörter gefunden.";
+        wordOutput.innerHTML = "";
+    }
     ready = true;
 }
 
