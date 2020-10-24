@@ -4,12 +4,14 @@ const output = document.getElementById("output");
 
 //to replace "_" with regex
 const wildCardRegex = /[_-]+/g;
+//to strip whitespaces
+const whiteSpaceRegex = /\s+/g
 
 let lastWordLength = 0;
 let words = [];
 
 function getInvalidChars() {
-    return invalid.value + input.value.replaceAll(wildCardRegex, "");
+    return (invalid.value + input.value.replaceAll(wildCardRegex, "")).toUpperCase();
 }
 
 function getRegex() {
@@ -21,8 +23,9 @@ function getRegex() {
     return new RegExp("^" + regexStr + "$", "iu")
 }
 
-//TODO: Call this function on button press.
+//This gets called on button press
 function updateWords() {
+    input.value = input.value.replaceAll(whiteSpaceRegex, "");
     const wordLength = input.value.length;
     if (lastWordLength === wordLength) {
         onWordsLoaded();
@@ -50,11 +53,11 @@ function onWordsLoaded() {
     for (let i = 0; i < words.length; i++) {
         if (regex.test(words[i])) {
             matches[index++] = words[i];
-            const usedChars = [];
+            let usedChars = "";
             for (let j = 0; j < words[i].length; j++) {
                 let char = words[i].charAt(j);
-                if (!arrayOrStringContains(usedChars, invalidChars, char)) {
-                    usedChars.push(char);
+                if (!stringContainsIgnoreCase(usedChars + invalidChars, char)) {
+                    usedChars += char;
                     letters.set(char, letters.has(char) ? letters.get(char) + 1 : 1);
                 }
             }
@@ -62,34 +65,21 @@ function onWordsLoaded() {
     }
 
     console.log(matches);
-    /*
+
     // sort by value
     const lettersSorted = new Map([...letters.entries()].sort((a, b) => b[1] - a[1]));
     console.log(lettersSorted);
-     */
-    console.log(letters);
-
-    let highestValue = -1;
-    let highestKey = undefined;
-    letters.forEach((value, key) => {
-        if (value > highestValue) {
-            highestValue = value;
-            highestKey = key;
-        }
-    });
-
+    
+    let letterList = "<div class='letter-list'>\n";
     //TODO: Better print:
-    output.innerHTML = "Probiere es mit: " + highestKey;
+    lettersSorted.forEach(((value, key) => {
+        letterList += key + ": " + value + ", \n";
+    }));
+    letterList = letterList.substring(0, letterList.length - 3) + "</div>";
+    console.log(letterList);
+    output.innerHTML = letterList;
 }
 
-function arrayOrStringContains(arr, str, val) {
-    if (str.indexOf(val) !== -1) {
-        return true;
-    }
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === val) {
-            return true;
-        }
-    }
-    return false;
+function stringContainsIgnoreCase(str, val) {
+    return str.indexOf(val) !== -1 || str.toUpperCase().indexOf(val.toUpperCase()) !== -1;
 }
