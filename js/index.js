@@ -112,3 +112,43 @@ const bigSzRegex = /ẞ/g;
 function stringToLowerCase(str) {
     return hasUmlauts() ? str.toLowerCase().replaceAll(bigSzRegex, "ß") : str.toLowerCase();
 }
+
+function getParamFromURL(param, defaultValue) {
+    let results = new RegExp("[\?&]" + param + "=([^&#]*)").exec(window.location.href);
+    return results === null ? defaultValue : decodeURIComponent(results[1]);
+}
+
+//if umlauts=t umlauts else not
+umlautCheckbox.checked = getParamFromURL("umlauts", "f") === "t";
+input.value = getParamFromURL("input", "");
+invalid.value = getParamFromURL("wrong", "");
+
+function setUrlParam(param, value) {
+    let newStr = param + "=" + encodeURIComponent(value);
+    let changed = false;
+    let url = window.location.href.replaceAll(new RegExp("([\?&])" + param + "=[^&#]*", "g"), (str, args) => {
+        if (changed || value === "") return "";
+        changed = true;
+        return str.substring(0, 1) + newStr;
+    });
+    if (value !== "" && url === window.location.href && url.indexOf(param) === -1) {
+        if (url.indexOf("?") === -1) {
+            url += "?" + newStr;
+        } else {
+            url += "&" + newStr;
+        }
+    }
+    history.replaceState("", url, url);
+}
+
+umlautCheckbox.onchange = () => {
+    setUrlParam("umlauts", hasUmlauts() ? "t" : "");
+}
+
+input.onchange = () => {
+    setUrlParam("input", input.value);
+}
+
+invalid.onchange = () => {
+    setUrlParam("wrong", invalid.value);
+}
