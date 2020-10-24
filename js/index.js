@@ -11,16 +11,16 @@ let lastWordLength = 0;
 let words = [];
 
 function getInvalidChars() {
-    return (invalid.value + input.value.replaceAll(wildCardRegex, "")).toUpperCase();
+    return stringToLowerCase(invalid.value + input.value.replaceAll(wildCardRegex, ""));
 }
 
 function getRegex() {
     //TODO: Umlauts Boolean
-    const invalidChars = "[^" + getInvalidChars() + "]"; //TODO: Ignore chars in input.value too?
+    const invalidChars = "[^" + getInvalidChars() + "]";
     const regexStr = input.value.replaceAll(wildCardRegex, (s) => {
         return invalidChars + (s.length > 1 ? "{" + s.length + "}" : "");
     })
-    return new RegExp("^" + regexStr + "$", "iu")
+    return new RegExp("^" + stringToLowerCase(regexStr) + "$", "u")
 }
 
 //This gets called on button press
@@ -68,18 +68,23 @@ function onWordsLoaded() {
 
     // sort by value
     const lettersSorted = new Map([...letters.entries()].sort((a, b) => b[1] - a[1]));
-    console.log(lettersSorted);
-    
+
     let letterList = "<div class='letter-list'>\n";
     //TODO: Better print:
     lettersSorted.forEach(((value, key) => {
         letterList += key + ": " + value + ", \n";
     }));
+    //close div and remove last ", \n"
     letterList = letterList.substring(0, letterList.length - 3) + "</div>";
     console.log(letterList);
     output.innerHTML = letterList;
 }
 
 function stringContainsIgnoreCase(str, val) {
-    return str.indexOf(val) !== -1 || str.toUpperCase().indexOf(val.toUpperCase()) !== -1;
+    return str.indexOf(val) !== -1 || stringToLowerCase(str).indexOf(stringToLowerCase(val)) !== -1;
+}
+
+const bigSzRegex = /ẞ/g;
+function stringToLowerCase(str) {
+    return str.toLowerCase().replaceAll(bigSzRegex, "ß");
 }
