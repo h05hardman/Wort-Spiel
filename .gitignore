@@ -1,2 +1,7 @@
 
 .idea/*
+
+#files used to gen things, but not needed:
+words/full_wordlist.txt
+words_only_a-z/full_wordlist.txt
+words_only_a-z/gen_words.sh
