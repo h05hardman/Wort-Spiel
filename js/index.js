@@ -83,7 +83,7 @@ function onWordsLoaded() {
     const letters = new Map();
 
     const matches = words.match(regex);
-    if (matches.length > 0) {
+    if (matches !== null && matches.length > 0) {
         let matchList = matches.length + " " + (isGerman() ? "passende Wörter" : "matching words") + ":<ul class='match-list'>";
         matches.forEach(match => {
             let used = invalidChars;
