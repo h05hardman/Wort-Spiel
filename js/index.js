@@ -12,7 +12,7 @@ const whiteSpaceRegex = /\s+/g
 
 let lastWordLength = 0;
 let lastHasUmlauts = undefined;
-let words = [];
+let words = "";
 
 function getInvalidChars() {
     return stringToLowerCase(invalid.value + input.value.replaceAll(wildCardRegex, ""));
@@ -22,8 +22,8 @@ function getRegex() {
     const invalidChars = "[^" + getInvalidChars() + "]";
     const regexStr = input.value.replaceAll(wildCardRegex, (s) => {
         return invalidChars + (s.length > 1 ? "{" + s.length + "}" : "");
-    })
-    return new RegExp("^" + stringToLowerCase(regexStr) + "$", "u")
+    });
+    return new RegExp("^" + stringToLowerCase(regexStr) + "$", "ugm");
 }
 
 function isGerman() {
@@ -62,9 +62,10 @@ function updateWords() {
                     if (status === 0 || (status >= 200 && status < 400)) {
                         lastWordLength = wordLength;
                         lastHasUmlauts = umlautsBoo;
-                        words = reader.responseText.split("\n");
+                        words = reader.responseText;
                         onWordsLoaded();
                     } else {
+                        words = "";
                         noWordsFound();
                     }
                 }
@@ -79,29 +80,24 @@ function onWordsLoaded() {
 
     const invalidChars = getInvalidChars();
 
-    const matches = [];
     const letters = new Map();
 
-    let index = 0;
-    for (let i = 0; i < words.length; i++) {
-        if (regex.test(words[i])) {
-            matches[index++] = words[i];
-            let usedChars = "";
-            for (let j = 0; j < words[i].length; j++) {
-                let char = words[i].charAt(j);
-                if (!stringContainsIgnoreCase(usedChars + invalidChars, char)) {
-                    usedChars += char;
-                    letters.set(char, letters.has(char) ? letters.get(char) + 1 : 1);
-                }
-            }
-        }
-    }
-
+    const matches = words.match(regex);
+    console.log(matches);
     if (matches.length > 0) {
         let matchList = matches.length + " " + (isGerman() ? "passende Wörter" : "matching words") + ":<ul class='match-list'>";
-        matches.forEach(val => {
-            matchList += "<li>" + val + "</li>";
+        matches.forEach(match => {
+            let used = invalidChars;
+            for (let j = 0; j < match.length; j++) {
+                const char = match.charAt(j);
+                if (!stringContainsIgnoreCase(used, char)) {
+                    letters.set(char, letters.has(char) ? letters.get(char) + 1 : 1);
+                    used += char;
+                }
+            }
+            matchList += "<li>" + match + "</li>";
         });
+
         wordOutput.innerHTML = matchList + "</ul>";
 
         // sort by value
