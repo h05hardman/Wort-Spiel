@@ -46,19 +46,31 @@ function updateWords() {
     ready = false;
     input.value = input.value.replaceAll(whiteSpaceRegex, "");
     const wordLength = input.value.length;
-    const umlautsBoo = hasUmlauts();
-    if (lastWordLength === wordLength && lastHasUmlauts === umlautsBoo) {
-        onWordsLoaded();
+    if (wordLength < 1) {
+        noWordsFound();
     } else {
-        const reader = new XMLHttpRequest() || new ActiveXObject("MSXML2.XMLHTTP");
-        reader.open("get", getWordsFolder() + wordLength + ".txt", true);
-        reader.onreadystatechange = function() {
-            lastWordLength = wordLength;
-            lastHasUmlauts = umlautsBoo;
-            words = reader.responseText.split("\n");
+        const umlautsBoo = hasUmlauts();
+        if (lastWordLength === wordLength && lastHasUmlauts === umlautsBoo) {
             onWordsLoaded();
-        };
-        reader.send(null);
+        } else {
+            const reader = new XMLHttpRequest() || new ActiveXObject("MSXML2.XMLHTTP");
+            reader.open("get", getWordsFolder() + wordLength + ".txt", true);
+            reader.onreadystatechange = function () {
+                // In local files, status is 0 upon success in Mozilla Firefox
+                if(reader.readyState === XMLHttpRequest.DONE) {
+                    let status = reader.status;
+                    if (status === 0 || (status >= 200 && status < 400)) {
+                        lastWordLength = wordLength;
+                        lastHasUmlauts = umlautsBoo;
+                        words = reader.responseText.split("\n");
+                        onWordsLoaded();
+                    } else {
+                        noWordsFound();
+                    }
+                }
+            };
+            reader.send(null);
+        }
     }
 }
 
@@ -102,10 +114,14 @@ function onWordsLoaded() {
         //close div and remove last ", "
         letterOutput.innerHTML = letterList.substring(0, letterList.length - 2) + "</div>";
     } else {
-        letterOutput.innerHTML = isGerman() ? "Keine Wörter gefunden." :  "No words found.";
-        wordOutput.innerHTML = "";
+        noWordsFound();
     }
     ready = true;
+}
+
+function noWordsFound() {
+    letterOutput.innerHTML = isGerman() ? "Keine passenden Wörter gefunden." :  "No matching words found.";
+    wordOutput.innerHTML = "";
 }
 
 function stringContainsIgnoreCase(str, val) {
