@@ -31,7 +31,7 @@ function hasUmlauts() {
 }
 
 function getWordsFolder() {
-    return hasUmlauts() ? "words/" : "words_only_a-z/";
+    return hasUmlauts() ? "words_de/" : "words_de_only_a-z/";
 }
 
 let ready = true;
