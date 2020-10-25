@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#8B0000">
+    <meta id = "meta-id" property="og:title" content="Hangman Solver">
+    <meta id = "meta-description" property="og:description" content="A website, that helps you with hangman.">
+
+    <title>Hangman-Solver</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <label class="label" for="input">Input (Use "_" for unknown letters):</label><br>
+    <input class="text-input" id="input">
+    <br>
+
+    <label class="label" for="invalid">Wrong letters:</label><br>
+    <input class="text-input" id="invalid">
+    <br>
+
+    <br>
+
+    <input type="button" class="button" id="submit" value="Input" onclick="updateWords()"/>
+
+    <br><br><br><br>
+
+    <div class="output" id="output"></div>
+    <br><br>
+    <div class="output" id="output2"></div>
+
+    <script>function getLanguage() {return "en";}</script>
+    <script src="../js/index.js"></script>
+</body>
+</html>

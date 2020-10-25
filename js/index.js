@@ -2,7 +2,8 @@ const input = document.getElementById("input");
 const invalid = document.getElementById("invalid");
 const letterOutput = document.getElementById("output");
 const wordOutput = document.getElementById("output2");
-const umlautCheckbox = document.getElementById("has-umlauts");
+//only in german:
+const umlautCheckbox = isGerman() ? document.getElementById("has-umlauts") : null;
 
 //to replace "_" with regex
 const wildCardRegex = /[_-]+/g;
@@ -18,7 +19,6 @@ function getInvalidChars() {
 }
 
 function getRegex() {
-    //TODO: Umlauts Boolean
     const invalidChars = "[^" + getInvalidChars() + "]";
     const regexStr = input.value.replaceAll(wildCardRegex, (s) => {
         return invalidChars + (s.length > 1 ? "{" + s.length + "}" : "");
@@ -26,12 +26,16 @@ function getRegex() {
     return new RegExp("^" + stringToLowerCase(regexStr) + "$", "u")
 }
 
+function isGerman() {
+    return getLanguage() === "de";
+}
+
 function hasUmlauts() {
-    return umlautCheckbox.checked;
+    return isGerman() && umlautCheckbox.checked;
 }
 
 function getWordsFolder() {
-    return hasUmlauts() ? "words_de/" : "words_de_only_a-z/";
+    return isGerman() ? (hasUmlauts() ? "words_de/" : "words_de_only_a-z/") : "../words_" + getLanguage() + "/";
 }
 
 let ready = true;
@@ -82,7 +86,7 @@ function onWordsLoaded() {
     }
 
     if (matches.length > 0) {
-        let matchList = matches.length + " passende Wörter:<ul class='match-list'>";
+        let matchList = matches.length + " " + (isGerman() ? "passende Wörter" : "matching words") + ":<ul class='match-list'>";
         matches.forEach(val => {
             matchList += "<li>" + val + "</li>";
         });
@@ -91,14 +95,14 @@ function onWordsLoaded() {
         // sort by value
         const lettersSorted = new Map([...letters.entries()].sort((a, b) => b[1] - a[1]));
         let letterList = "<div class='letter-list'>\n";
-        //TODO: Better print:
+        //TODO: Better print?:
         lettersSorted.forEach(((value, key) => {
             letterList += key + ": " + value + ", ";
         }));
         //close div and remove last ", "
         letterOutput.innerHTML = letterList.substring(0, letterList.length - 2) + "</div>";
     } else {
-        letterOutput.innerHTML = "Keine Wörter gefunden.";
+        letterOutput.innerHTML = isGerman() ? "Keine Wörter gefunden." :  "No words found.";
         wordOutput.innerHTML = "";
     }
     ready = true;
@@ -119,7 +123,9 @@ function getParamFromURL(param, defaultValue) {
 }
 
 //if umlauts=t umlauts else not
-umlautCheckbox.checked = getParamFromURL("umlauts", "f") === "t";
+if (isGerman()) {
+    umlautCheckbox.checked = getParamFromURL("umlauts", "f") === "t";
+}
 input.value = getParamFromURL("input", "");
 invalid.value = getParamFromURL("wrong", "");
 
@@ -141,8 +147,10 @@ function setUrlParam(param, value) {
     history.replaceState("", url, url);
 }
 
-umlautCheckbox.onchange = () => {
-    setUrlParam("umlauts", hasUmlauts() ? "t" : "");
+if (isGerman()) {
+    umlautCheckbox.onchange = () => {
+        setUrlParam("umlauts", hasUmlauts() ? "t" : "");
+    }
 }
 
 input.onchange = () => {
