@@ -5,12 +5,12 @@ ai
 am
 an
 ar
-aß
 at
 au
+aß
 bh
-bö
 bp
+bö
 cd
 ch
 cm
@@ -69,9 +69,7 @@ nl
 ns
 nt
 ob
-öd
 oh
-öl
 os
 pc
 ph
@@ -98,3 +96,5 @@ xi
 xp
 zk
 zu
+öd
+öl
