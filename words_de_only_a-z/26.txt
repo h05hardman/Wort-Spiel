@@ -160,7 +160,6 @@ alkoholverbotsverordnungen
 alleingueltigkeitsanspruch
 alleinherrschaftsanspruchs
 alleinvertretungsanmassung
-alleinvertretungsanmassung
 alleinvertretungsanspruchs
 alleinvertretungsbestreben
 allerweltsliebesgeschichte
@@ -800,7 +799,6 @@ aussenspiegelverkleidungen
 aussenvertretungskompetenz
 aussenwirtschaftsabteilung
 aussenwirtschaftsausschuss
-aussenwirtschaftspolitiken
 aussenwirtschaftspolitiken
 aussenwirtschaftsrundschau
 aussenwirtschaftsstatistik
@@ -4365,7 +4363,6 @@ fussballkonferenzschaltung
 fussballkontinentalverband
 fussballkorruptionsskandal
 fussballnationalmannschaft
-fussballnationalmannschaft
 fussballnationaltorhueters
 fussballseniorenmannschaft
 fussballtrainervereinigung
@@ -4376,7 +4373,6 @@ fussballvereinswettbewerbs
 fussballweltmeisterschafts
 fussbehandlungseinrichtung
 fussbodenheizungsleitungen
-fussgaengerunterfuehrungen
 futteraufbereitungstechnik
 futtermitteldienstleisters
 futtermittelnachhaltigkeit
@@ -4598,7 +4594,6 @@ gemeindestrassenverbindung
 gemeindeunfallversicherung
 gemeindeverbandspraesident
 gemeindeverbandsvorstandes
-gemeindeverbindungsstrasse
 gemeindeverbindungsstrasse
 gemeindeverfassungsgesetze
 gemeindeverfassungsnovelle
@@ -5009,7 +5004,6 @@ geschwindigkeitsuebersicht
 geschwindigkeitsvektorfeld
 geschwindigkeitsverordnung
 geschwindigkeitsverstoesse
-geschwindigkeitsverstoesse
 geschwindigkeitsverstosses
 geschwindigkeitsverteilung
 geschwindigkeitswarnanlage
@@ -5363,7 +5357,6 @@ grossbildprojektionsgeraet
 grossbrennschneidmaschinen
 groessenbegrenzungssteuern
 grossfeldhandballabteilung
-grossforschungseinrichtung
 grossforschungsunternehmen
 grossgrundbesitzverwaltung
 grosshandelsgenossenschaft
@@ -6062,7 +6055,6 @@ hochwasserschutzeingriffen
 hochwasserschutzkommission
 hochwasserschutzkonzeption
 hochwasserschutzmassnahmen
-hochwasserschutzmassnahmen
 hochwasserschutzprogrammen
 hochwasserschutzsperrwerks
 hochwasservorhersagemodell
@@ -6554,7 +6546,6 @@ jugendfreiwilligendiensten
 jugendfreiwilligendienstes
 jugendfuersorgeausschusses
 jugendfuersorgeeinrichtung
-jugendfussballmannschaften
 jugendfussballmannschaften
 jugendfussballorganisation
 jugendgemeinschaftsdienste
@@ -10622,7 +10613,6 @@ rationalisierungskartellen
 rationalisierungskollektiv
 rationalisierungsloesungen
 rationalisierungsmassnahme
-rationalisierungsmassnahme
 rationalisierungsmittelbau
 rationalisierungspotential
 rationalisierungspotenzial
@@ -11773,7 +11763,6 @@ schwarzkieferassoziationen
 schwarzkoerpertemperaturen
 schwarzstaubniederschlaege
 schwarzweissillustrationen
-schwarzweissillustrationen
 schwarzweissreproduktionen
 schwefelbakterienvorkommen
 schwefeldioxidhoechstmenge
@@ -12900,7 +12889,6 @@ strassenbahnbetriebshoefen
 strassenbahndepothaeuschen
 strassenbahnendhaltestelle
 strassenbahngesellschaften
-strassenbahngesellschaften
 strassenbahngrossraumwagen
 strassenbahngueterverkehrs
 strassenbahnkreuzungspunkt
@@ -12914,7 +12902,6 @@ strassenbahnvorlaufbetrieb
 strassenbahnwagenproduzent
 strassenbahnwartehaeuschen
 strassenbahnzubringerlinie
-strassenbauingenieurwesens
 strassenbauingenieurwesens
 strassenbegrenzungspfeiler
 strassenbegrenzungssteinen
@@ -12954,7 +12941,6 @@ strassenreinigungsbehoerde
 strassenreinigungsbetriebe
 strassenreinigungsgebaeude
 strassenreinigungsmaschine
-strassenreinigungsmaschine
 strassenreinigungsregister
 strassensanierungsarbeiten
 strassensanierungsmethoden
@@ -12971,15 +12957,12 @@ strassenverkehrsgeschichte
 strassenverkehrsingenieure
 strassenverkehrskommission
 strassenverkehrskontrollen
-strassenverkehrskontrollen
 strassenverkehrskonvention
 strassenverkehrsleitsystem
 strassenverkehrsnetzwerkes
 strassenverkehrsschlagader
 strassenverkehrssicherheit
-strassenverkehrssicherheit
 strassenverkehrsstaedtchen
-strassenverkehrsteilnehmer
 strassenverkehrsteilnehmer
 strassenverkehrsverbindung
 strassenverkehrsvermeidung
@@ -12987,7 +12970,6 @@ strassenverkehrsverstoesse
 strassenverkehrsverwaltung
 strassenverkehrsvorschrift
 strassenverkehrswegweisern
-strassenverkehrszaehlungen
 strassenverkehrszaehlungen
 strassenweltmeisterschafte
 strassenzeitungsverkaeufer
@@ -15176,7 +15158,6 @@ wasserstrassengesellschaft
 wasserstrassenmaschinenamt
 wasserstrassenverbindungen
 wasserstrassenverkehrswege
-wasserstrassenverwaltungen
 wasserstrassenverwaltungen
 wassertemperaturansprueche
 wassertransferdruckstrasse

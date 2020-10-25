@@ -13,8 +13,6 @@ abbauten
 abbauweg
 abbauzug
 abbeisse
-abbeisse
-abbeisst
 abbeisst
 abberufe
 abberuft
@@ -306,7 +304,6 @@ abreiben
 abreisen
 abreisse
 abreisst
-abreisst
 abreiste
 abrichte
 abriebes
@@ -408,7 +405,6 @@ abstimme
 abstimmt
 abstirbt
 abstoppt
-abstosse
 abstosse
 abstrafe
 abstraft
@@ -546,7 +542,6 @@ aechtete
 achteten
 achtfach
 achtfilm
-achtfuss
 achtfuss
 achtgang
 achtkern
@@ -1603,7 +1598,6 @@ anmachst
 anmalten
 anmarsch
 anmassen
-anmassen
 anmasste
 anmelden
 anmelder
@@ -1667,7 +1661,6 @@ anregung
 anreihen
 anreihte
 anreisen
-anreisst
 anreisst
 anreiste
 anreizen
@@ -1749,7 +1742,6 @@ anstiegs
 anstifte
 anstimme
 anstimmt
-anstosse
 anstosse
 anstrebe
 anstrebt
@@ -2353,7 +2345,6 @@ auffasst
 auffiele
 auffinde
 auffrass
-auffrass
 aufgaben
 aufgangs
 aufgeben
@@ -2620,7 +2611,6 @@ ausleihe
 ausleiht
 auslesen
 ausliess
-ausliess
 ausliest
 ausloben
 auslobte
@@ -2635,7 +2625,6 @@ ausmacht
 ausmalen
 ausmalst
 ausmalte
-ausmasse
 ausmasse
 ausmerze
 ausmerzt
@@ -2683,10 +2672,7 @@ ausspare
 ausspart
 ausspeie
 ausspeit
-aeussere
 aeussern
-aeussern
-aeussert
 aeussert
 aussetze
 aussetzt
@@ -2694,7 +2680,6 @@ ausstand
 ausstehe
 aussteht
 ausstieg
-ausstoss
 ausstoss
 aussuche
 aussucht
@@ -3598,7 +3583,6 @@ barlosen
 barmagie
 barmanns
 barmasse
-barmasse
 barmitte
 barmixer
 barmusik
@@ -3925,7 +3909,6 @@ baumanns
 baumarkt
 baumarme
 baumaske
-baumasse
 baumasse
 baumbach
 baumbahn
@@ -4493,7 +4476,6 @@ beisicht
 beisilbe
 beispiel
 beissend
-beissend
 beistadt
 beistand
 beistehe
@@ -4766,7 +4748,6 @@ bergfoto
 bergfrau
 bergfunk
 bergfuss
-bergfuss
 berggang
 berggast
 berggips
@@ -4937,8 +4918,6 @@ besaiten
 besaitet
 besannen
 besaesse
-besaesse
-besassen
 besassen
 besaetze
 besatzer
@@ -5699,7 +5678,6 @@ blaufink
 blauform
 blaufrau
 blaufuss
-blaufuss
 blaugast
 blaugelb
 blauglas
@@ -5807,7 +5785,6 @@ bleifeld
 bleifels
 bleifrei
 bleifund
-bleifuss
 bleifuss
 bleiglas
 bleigurt
@@ -6980,7 +6957,6 @@ bunteule
 buntfilm
 buntfunk
 buntfuss
-buntfuss
 buntglas
 buntgrad
 bunthals
@@ -7220,36 +7196,26 @@ busslast
 busslied
 bussmann
 bussakts
-bussbach
-bussberg
 bussboom
-bussbuch
 bussdorf
 bussecke
 buessend
 buessern
-buessers
 buessest
-bussgang
-bussgeld
 busshaft
 busshaus
 busshofs
 bussjahr
-busslied
 bussloch
-bussmann
 busstage
 busstags
 busswerk
 busszeit
 busszone
 busstadt
-busstags
 busstege
 bussteig
 bussteil
-buessten
 buessten
 busstopp
 busstore
@@ -7592,7 +7558,6 @@ dachfalz
 dachfond
 dachform
 dachfuss
-dachfuss
 dachgang
 dachgold
 dachgrat
@@ -7682,7 +7647,6 @@ daemmern
 daemmert
 dammfeld
 dammform
-dammfuss
 dammfuss
 dammgeld
 daemmgen
@@ -8486,7 +8450,6 @@ draengte
 drapiert
 drauflos
 draussen
-draussen
 drechsel
 dreckada
 dreckhof
@@ -8601,7 +8564,6 @@ dreiflur
 dreiform
 dreifurt
 dreifuss
-dreifuss
 dreigang
 dreigurt
 dreihahn
@@ -8637,7 +8599,6 @@ dreiseil
 dreisieg
 dreisitz
 dreispur
-dreissig
 dreissig
 dreistab
 dreisteg
@@ -8951,7 +8912,6 @@ eckstein
 eckstich
 eckstiel
 eckstock
-eckstoss
 eckstoss
 eckstrom
 eckstube
@@ -9386,7 +9346,6 @@ einbuchs
 einbuden
 einbunds
 einbusse
-einbusse
 eincheck
 eindampf
 eindecke
@@ -9422,7 +9381,6 @@ einfelds
 einfiele
 einfinde
 einfirst
-einfloss
 einfloss
 einfluge
 einflugs
@@ -9499,7 +9457,6 @@ einlenke
 einlenkt
 einlesen
 einliefe
-einliess
 einliess
 einliest
 einliter
@@ -9889,7 +9846,6 @@ eisstein
 eisstiel
 eisstock
 eisstoss
-eisstoss
 eisstrom
 eisstufe
 eissturm
@@ -9945,7 +9901,6 @@ eitrigem
 eitrigen
 eitriger
 eitriges
-eiweisse
 eiweisse
 eizellen
 ejakulat
@@ -10157,7 +10112,6 @@ endloses
 endmarke
 endmarkt
 endmasse
-endmasse
 endmauer
 endmenge
 endmixer
@@ -10331,7 +10285,6 @@ entlehnt
 entleibt
 entleihe
 entleiht
-entliess
 entliess
 entlocke
 entlockt
@@ -10802,7 +10755,6 @@ ergebung
 ergehend
 ergiebig
 ergiesse
-ergiesst
 ergiesst
 ergingen
 erglueht
@@ -12222,7 +12174,6 @@ feldflur
 feldform
 feldfrei
 feldfuss
-feldfuss
 feldgabe
 feldgang
 feldglas
@@ -12260,7 +12211,6 @@ feldlauf
 feldluft
 feldmann
 feldmark
-feldmass
 feldmass
 feldmaus
 feldmobs
@@ -12371,7 +12321,6 @@ felsfall
 felsfest
 felsflur
 felsform
-felsfuss
 felsfuss
 felsgang
 felsgrab
@@ -13029,8 +12978,6 @@ fleckung
 flehende
 fleisses
 fleissig
-fleissig
-fleisses
 fletsche
 fletscht
 flexibel
@@ -13045,7 +12992,6 @@ fliegers
 fliehend
 fliessen
 fliessau
-fliessen
 flimmern
 flimmert
 flippern
@@ -13067,9 +13013,7 @@ floriere
 floriert
 floskeln
 floessen
-floessen
 floesset
-floesste
 floesste
 floetend
 floetest
@@ -13521,7 +13465,6 @@ fraesend
 fraesgut
 fraesrad
 fraessen
-fraessen
 fraesten
 fraeszug
 frauchen
@@ -13915,25 +13858,16 @@ fussarzt
 fusssatz
 fussbach
 fussbahn
-fussbahn
-fussball
 fussband
-fussbank
 fussbank
 fussbass
 fussberg
-fussberg
-fussbett
 fussbett
 fussblei
 fussbote
 fussbuch
 fussdach
-fussdorf
-fussende
-fussfall
 fussfalz
-fussform
 fussgang
 fusshain
 fusshang
@@ -13941,7 +13875,6 @@ fusshaus
 fusshaut
 fussheer
 fusshoch
-fusshorn
 fusssims
 fussjagd
 fusskuss
@@ -13949,27 +13882,18 @@ fusslage
 fusslauf
 fussloch
 fusslose
-fussmann
 fussmass
 fussmaus
-fussnote
 fusspaar
 fusspass
-fusspfad
-fusspils
-fusspilz
 fusspost
 fussrand
-fussraum
 fussreif
 fussring
 fusssack
-fusssatz
 fusssaum
 fusssole
 fussspur
-fussspur
-fusssteg
 fusssteg
 fussteil
 fusstour
@@ -13981,10 +13905,6 @@ fusswerk
 fusszahl
 fusszehe
 fusszone
-fussteil
-fusstour
-fussvolk
-fusswege
 futteral
 fuettere
 futterei
@@ -14402,7 +14322,6 @@ gebuergt
 geburten
 gebuesch
 gebuesst
-gebuesst
 gecoatet
 gedachte
 gedaemmt
@@ -14476,7 +14395,6 @@ gefangen
 gefaerbt
 gefasels
 gefaselt
-gefaesse
 gefaesse
 gefasste
 gefastet
@@ -14649,8 +14567,6 @@ geimpfte
 geisseln
 geisselt
 geissele
-geisseln
-geisselt
 geistere
 geistern
 geistert
@@ -14868,7 +14784,6 @@ gemalter
 gemaltes
 gemanagt
 gemaesse
-gemaesse
 gemaeuer
 gemauert
 gemeinde
@@ -14963,8 +14878,6 @@ genieren
 genierst
 genierte
 geniesse
-geniesse
-geniesst
 geniesst
 genietet
 genitive
@@ -15155,7 +15068,6 @@ gesandte
 gesaenge
 gesanges
 gesaesse
-gesaesse
 gesaetem
 gesaeten
 gesaeter
@@ -15279,7 +15191,6 @@ gesundet
 gesungen
 gesunken
 gesuesst
-gesuesst
 getadelt
 getafelt
 getakelt
@@ -15371,7 +15282,6 @@ geweidet
 geweihen
 geweihes
 geweihte
-geweisst
 geweisst
 gewelkte
 gewellte
@@ -15465,10 +15375,7 @@ giessart
 giessbar
 giessend
 giessens
-giessens
 giessern
-giessern
-giessers
 giessers
 giessgen
 giesshof
@@ -15623,7 +15530,6 @@ glasform
 glasfrau
 glasfuge
 glasfund
-glasfuss
 glasfuss
 glasgang
 glasgarn
@@ -15826,7 +15732,6 @@ goldform
 goldfrau
 goldfund
 goldfunk
-goldfuss
 goldfuss
 goldgabe
 goldgelb
@@ -16058,7 +15963,6 @@ grabform
 grabfoto
 grabfund
 grabfuss
-grabfuss
 grabgang
 grabgeld
 grabhaus
@@ -16256,7 +16160,6 @@ gretchen
 griechen
 griechin
 griessen
-griessen
 griffall
 griffarm
 griffart
@@ -16331,31 +16234,21 @@ grossjet
 grossmut
 grossohr
 grossrat
-grossabt
 grossakt
 grossalm
 grossamt
 grossbad
 grossbar
-grossbau
 grossbox
 grossbus
 grossdia
 grosssee
-groessen
-groesser
-grossgut
-grosshof
 grosshub
 grosshut
 grosslob
 grosslug
-grossmut
 grossohm
-grossohr
 grossrad
-grossrat
-grosssee
 grosstal
 grosstat
 groesste
@@ -16365,12 +16258,8 @@ grossuhr
 grosswal
 grossweg
 grosszeh
-grosszeh
 grosszoo
 grosszug
-grosstal
-groesste
-grossuhr
 groteske
 gruebele
 gruebeln
@@ -16443,9 +16332,6 @@ gruslige
 grussbox
 gruessen
 grusslos
-gruessen
-grusslos
-gruesste
 gruesste
 guckende
 guckheim
@@ -17114,7 +17000,6 @@ hangflug
 hangflur
 hangform
 hangfuss
-hangfuss
 hanggang
 hanggong
 hanghahn
@@ -17211,7 +17096,6 @@ hartfest
 hartfett
 hartfilz
 hartfurt
-hartfuss
 hartfuss
 hartgeld
 hartgips
@@ -17807,12 +17691,10 @@ heiserer
 heiseres
 heissbad
 heissgas
-heissbad
 heissbar
 heissend
 heissere
 heissest
-heissgas
 heisshof
 heiterem
 heiteren
@@ -18611,7 +18493,6 @@ hohlfeld
 hohlfels
 hohlform
 hohlfuss
-hohlfuss
 hohlgang
 hohlgips
 hohlglas
@@ -18627,7 +18508,6 @@ hohlkopf
 hohllauf
 hohlloch
 hohlmann
-hohlmass
 hohlmass
 hohlmast
 hohlmond
@@ -18716,7 +18596,6 @@ holzfrau
 holzfrei
 holzfund
 holzfuss
-holzfuss
 holzgang
 holzgase
 holzgeld
@@ -18774,7 +18653,6 @@ holzlose
 holzmaar
 holzmann
 holzmark
-holzmass
 holzmass
 holzmast
 holzmeer
@@ -19004,7 +18882,6 @@ hublands
 hublifte
 hublifts
 hubmanns
-hubmasse
 hubmasse
 hubmotor
 huboesen
@@ -20904,7 +20781,6 @@ klopfend
 klopften
 klopftet
 kloessen
-kloessen
 kloester
 klostern
 klosters
@@ -21730,7 +21606,6 @@ kronerbe
 kronfeld
 kronform
 kronfuss
-kronfuss
 kronglas
 krongold
 krongrad
@@ -22462,7 +22337,6 @@ landfrau
 landfunk
 landfurt
 landfuss
-landfuss
 landgabe
 landgang
 landgans
@@ -22512,7 +22386,6 @@ landmagd
 landmais
 landmann
 landmark
-landmass
 landmass
 landmaus
 landmeer
@@ -23576,7 +23449,6 @@ liegeort
 liegerad
 liegeton
 liessest
-liessest
 likoeren
 liliputs
 limerick
@@ -23779,14 +23651,12 @@ loslegen
 loslegte
 loeslich
 losliess
-losliess
 losloese
 losloest
 losmacht
 losrennt
 losrollt
 loesstal
-loessweg
 loessweg
 loestest
 lostritt
@@ -24286,7 +24156,6 @@ massholm
 massiere
 massiert
 maessige
-maessige
 massigem
 massigen
 massiger
@@ -24304,29 +24173,19 @@ masslose
 masspike
 massport
 massbild
-massfeld
-massgabe
-massbach
 massband
 massbaum
-massberg
-massdorf
 masselle
 massfass
 masshaus
-massheim
 masshemd
 masskahn
 masskorb
-masskrug
 masslaus
-masslose
-massmann
 massnorm
 massplan
 massraum
 massrute
-massstab
 massstab
 massvoll
 masswerk
@@ -24334,9 +24193,6 @@ masswert
 masswort
 masszahl
 masszoll
-massvoll
-masswerk
-masszahl
 mastarme
 mastaura
 mastbach
@@ -24355,7 +24211,6 @@ maestete
 mastfall
 mastfett
 mastform
-mastfuss
 mastfuss
 mastgang
 mastgans
@@ -24631,8 +24486,6 @@ meineids
 meinende
 meinigen
 meintest
-meisseln
-meissels
 meisseln
 meissels
 meisselt
@@ -25691,7 +25544,6 @@ muslimin
 musselin
 muessige
 muessest
-muessige
 muessten
 musstest
 muesstet
@@ -25710,7 +25562,6 @@ mutlosen
 mutloser
 mutloses
 mutmasse
-mutmasst
 mutmasst
 mutprobe
 muettern
@@ -26042,7 +25893,6 @@ nennfall
 nennform
 nenngeld
 nennlast
-nennmass
 nennmass
 nennname
 nennsohn
@@ -26443,7 +26293,6 @@ nordfink
 nordflug
 nordflur
 nordfuge
-nordfuss
 nordfuss
 nordgang
 nordgold
@@ -28860,8 +28709,6 @@ pressung
 prestige
 preussen
 preussin
-preussen
-preussin
 prickele
 prickeln
 prickelt
@@ -29950,11 +29797,8 @@ reisewut
 reisezug
 reissaus
 reissend
-reissend
 reissers
-reissaus
 reissern
-reissers
 reitanis
 reitbach
 reitbahn
@@ -30646,7 +30490,6 @@ rohlings
 rohloess
 rohmanns
 rohmarge
-rohmasse
 rohmasse
 rohmehls
 rohmenge
@@ -31357,9 +31200,7 @@ russiges
 russisch
 russland
 russigem
-russigen
 russiger
-russiges
 ruestend
 ruestens
 ruestete
@@ -32052,8 +31893,6 @@ scheinen
 scheines
 scheinst
 scheisse
-scheisse
-scheisst
 scheisst
 scheitel
 scheiten
@@ -32116,8 +31955,6 @@ schieren
 schierer
 schieres
 schiesse
-schiesse
-schiesst
 schiesst
 schiffen
 schiffer
@@ -32183,7 +32020,6 @@ schleier
 schleife
 schleift
 schleims
-schleiss
 schleiss
 schlemme
 schlemmt
@@ -32329,7 +32165,6 @@ schorfig
 schorlen
 schossen
 schosses
-schosses
 schotten
 schotter
 schottes
@@ -32474,7 +32309,6 @@ schweige
 schweigt
 schweine
 schweins
-schweiss
 schweiss
 schwelen
 schwelge
@@ -33398,7 +33232,6 @@ skishows
 skisiege
 skiskala
 skispass
-skispass
 skispiel
 skisport
 skistall
@@ -33712,9 +33545,6 @@ sparzins
 spassbad
 spaessen
 spassige
-spassbad
-spaessen
-spassige
 spasstag
 spassten
 spassuhr
@@ -33813,8 +33643,6 @@ spielweg
 spielwut
 spielzug
 spiessen
-spiessen
-spiesser
 spiesser
 spiesses
 spiessig
@@ -33909,7 +33737,6 @@ sprengte
 sprenkle
 sprichst
 spriesse
-spriesst
 spriesst
 springen
 springer
@@ -34338,7 +34165,6 @@ stiefeln
 stiefels
 stiehlst
 stiessen
-stiessen
 stiftamt
 stiftart
 stiftbox
@@ -34460,9 +34286,6 @@ stossend
 stossart
 stossaxt
 stossbau
-stoessel
-stoessen
-stossend
 stossens
 stossgas
 stosston
@@ -34506,12 +34329,10 @@ straenge
 stranges
 strapaze
 strassen
-strassen
 stratege
 straeube
 straeubt
 strauchs
-strausse
 strausse
 streamer
 strebbau
@@ -34878,7 +34699,6 @@ suedflur
 suedform
 suedfunk
 suedfuss
-suedfuss
 suedgang
 suedglas
 suedgolf
@@ -35057,7 +34877,6 @@ surferin
 surrende
 susannes
 suspekte
-suessere
 suessere
 suesshof
 suessoel
@@ -36572,7 +36391,6 @@ torfloch
 torflore
 torfmann
 torfmass
-torfmass
 torfmoor
 torfmoos
 torfmull
@@ -37132,7 +36950,6 @@ turmfest
 turmform
 turmfoto
 turmfuss
-turmfuss
 turmgang
 turmgeld
 turmgold
@@ -37535,7 +37352,6 @@ umranken
 umrankte
 umrannte
 umreisse
-umreisst
 umreisst
 umrennen
 umringen
@@ -38081,7 +37897,6 @@ verhexen
 verhexte
 verhielt
 verhiess
-verhiess
 verhilft
 verhoben
 verhoere
@@ -38289,13 +38104,11 @@ versenkt
 versetze
 versetzt
 versfuss
-versfuss
 versiegt
 versieht
 versiert
 versinke
 versinkt
-versmass
 versmass
 versnobt
 versohle
@@ -38312,7 +38125,6 @@ verstehe
 versteht
 verstell
 verstieg
-verstoss
 verstoss
 versuche
 versuchs
@@ -38529,7 +38341,6 @@ vieregge
 vierelle
 vierfach
 vierfeld
-vierfuss
 vierfuss
 viergang
 viergold
@@ -39093,7 +38904,6 @@ vorstern
 vorstich
 vorstoff
 vorstoss
-vorstoss
 vorstrom
 vorstube
 vorstufe
@@ -39611,7 +39421,6 @@ wandfach
 wandfeld
 wandform
 wandfoto
-wandfuss
 wandfuss
 wandgrab
 wandhaft
@@ -40216,7 +40025,6 @@ weinlust
 weinmann
 weinmark
 weinmass
-weinmass
 weinmaut
 weinmond
 weinmoos
@@ -40281,10 +40089,7 @@ weissbad
 weissbox
 weisshof
 weisshut
-weissalm
 weisshai
-weisshof
-weisshut
 weisslid
 weissohr
 weissoel
@@ -40294,8 +40099,6 @@ weisstal
 weisstee
 weisston
 weisswal
-weisstal
-weisstee
 weisstor
 weiterem
 weiteren
@@ -40645,7 +40448,6 @@ westflur
 westform
 westfuge
 westfunk
-westfuss
 westfuss
 westgang
 westgeld
@@ -41668,7 +41470,6 @@ zapfkopf
 zapfloch
 zapfluft
 zapfmass
-zapfmass
 zapfrohr
 zapfwirt
 zapfzeug
@@ -41794,7 +41595,6 @@ zeitlohn
 zeitlose
 zeitlupe
 zeitmann
-zeitmass
 zeitmass
 zeitmeer
 zeitmode
@@ -41981,7 +41781,6 @@ zerreden
 zerredet
 zerreibt
 zerreiss
-zerreiss
 zerrende
 zerrinne
 zerrinnt
@@ -42122,7 +41921,6 @@ zierfeld
 zierform
 zierfuge
 zierfuss
-zierfuss
 ziergarn
 zierglas
 ziergras
@@ -42261,7 +42059,6 @@ zinseier
 zinsende
 zinsflut
 zinsfrei
-zinsfuss
 zinsfuss
 zinsgeld
 zinshahn
@@ -42442,12 +42239,10 @@ zottiges
 zubauten
 zubehoer
 zubeisst
-zubeisst
 zubinden
 zubindet
 zubringe
 zubringt
-zubussen
 zubussen
 zucchini
 zuchtart
@@ -42704,7 +42499,6 @@ zulegten
 zuleiten
 zuleitet
 zuliesse
-zuliesse
 zuloeten
 zumachen
 zumauern
@@ -42859,7 +42653,6 @@ zweifelt
 zweifilm
 zweifler
 zweiform
-zweifuss
 zweifuss
 zweigamt
 zweigang

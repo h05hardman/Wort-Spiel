@@ -207,8 +207,6 @@ aesse
 assel
 assen
 asses
-aesse
-assen
 aeste
 astei
 aster
@@ -395,7 +393,6 @@ bloed
 blogs
 blond
 bloss
-bloss
 blues
 bluff
 bluem
@@ -504,7 +501,6 @@ busei
 busen
 bushi
 bushs
-busse
 busse
 butan
 buett
@@ -1038,7 +1034,6 @@ floht
 flops
 flora
 floss
-floss
 flott
 floez
 fluch
@@ -1080,7 +1075,6 @@ frank
 franz
 fraes
 frass
-frass
 freak
 frech
 freie
@@ -1117,8 +1111,6 @@ furie
 fuers
 fusel
 fusse
-fusse
-fusst
 fusst
 futur
 gaebe
@@ -1171,7 +1163,6 @@ geier
 geige
 geigt
 geile
-geiss
 geiss
 geist
 geize
@@ -1270,13 +1261,11 @@ grogs
 groel
 groll
 gross
-gross
 grube
 grubt
 gruft
 gruen
 grund
-gruss
 gruss
 gucke
 guckt
@@ -1401,7 +1390,6 @@ heine
 heino
 heinz
 heiss
-heiss
 heize
 heizt
 helds
@@ -1444,7 +1432,6 @@ hexer
 hexte
 hiebe
 hielt
-hiess
 hiess
 hieve
 hievt
@@ -1807,7 +1794,6 @@ klont
 klopf
 klops
 kloss
-kloss
 klotz
 klubs
 kluft
@@ -2073,7 +2059,6 @@ liege
 liegt
 lieht
 liess
-liess
 liest
 lifte
 lifts
@@ -2130,7 +2115,6 @@ losem
 losen
 loser
 loses
-loess
 loess
 loest
 loste
@@ -2215,8 +2199,6 @@ marys
 maerz
 maske
 masse
-masse
-masst
 masst
 matte
 mauer
@@ -2348,7 +2330,6 @@ murks
 murre
 murrt
 musik
-musse
 musse
 musst
 muten
@@ -2828,7 +2809,6 @@ reimt
 reine
 reise
 reiss
-reiss
 reist
 reite
 reize
@@ -2989,7 +2969,6 @@ sannt
 santa
 sanyo
 sargs
-sasst
 sasst
 saest
 satan
@@ -3167,7 +3146,6 @@ sorge
 sorgt
 sorte
 sosse
-sosse
 sound
 sowie
 spaeh
@@ -3178,7 +3156,6 @@ spant
 sparc
 spare
 spart
-spass
 spass
 spaet
 spatz
@@ -3302,7 +3279,6 @@ surre
 surrt
 suses
 sushi
-suess
 suess
 svens
 swapo
@@ -3722,7 +3698,6 @@ weine
 weins
 weint
 weise
-weiss
 weiss
 weist
 weite

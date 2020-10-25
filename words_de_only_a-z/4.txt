@@ -75,7 +75,6 @@ arzt
 aese
 asse
 asst
-asst
 aest
 asta
 asyl
@@ -442,7 +441,6 @@ funk
 fuer
 furt
 furz
-fuss
 fuss
 gaeb
 gabe
@@ -894,7 +892,6 @@ mars
 marx
 mary
 mass
-mass
 mast
 matt
 maul
@@ -1193,7 +1190,6 @@ rums
 rund
 rune
 russ
-russ
 rute
 rwes
 saal
@@ -1218,7 +1214,6 @@ sank
 sann
 saps
 sarg
-sass
 sass
 saet
 satt

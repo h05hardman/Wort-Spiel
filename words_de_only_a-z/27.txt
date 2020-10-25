@@ -518,15 +518,12 @@ aussenpolitikstudienzentrum
 aussenwirtschaftsdokumenten
 aussenwirtschaftsfoerderers
 aussenwirtschaftsfoerderung
-aussenwirtschaftsfoerderung
 aussenwirtschaftsinteressen
-aussenwirtschaftskommission
 aussenwirtschaftskommission
 aussenwirtschaftspruefungen
 aussenwirtschaftsrechtstage
 aussenwirtschaftsstrategien
 aussenwirtschaftstaetigkeit
-aussenwirtschaftsverordnung
 aussenwirtschaftsverordnung
 aussenwirtschaftsvertretung
 aussenwirtschaftsverwaltung
@@ -3036,7 +3033,6 @@ fussballausbildungsstaetten
 fussballauswahlmannschaften
 fussballberichterstattungen
 fussballeuropameisterschaft
-fussballeuropameisterschaft
 fussballhallenmeisterschaft
 fussballmeisterschaftsspiel
 fussballmeisterschaftstitel
@@ -3051,7 +3047,6 @@ fussballuebertragungsrechte
 fussballvereinsmannschaften
 fussballvereinsvorsitzender
 fussballweltmeisterkapitaen
-fussballweltmeisterschaften
 fussballweltmeisterschaften
 futteraufbewahrungsgebaeude
 futtermittelmittelbewertung
@@ -5115,7 +5110,6 @@ kopierschutzbeschraenkungen
 kopplungswahrscheinlichkeit
 korallenbankgrossstrukturen
 korngroessendifferenzierung
-korngroessendifferenzierung
 korngroessenzusammensetzung
 koerperbehindertenfuersorge
 koerperbehindertenpaedagoge
@@ -5730,7 +5724,6 @@ langzeittherapiebegruendung
 langzeittherapieeinrichtung
 langzeitwetterbeobachtungen
 laermbekaempfungsmassnahmen
-laermbekaempfungsmassnahmen
 laermueberwachungsstationen
 laermzulassungsvorschriften
 laserdirektschreibverfahren
@@ -5760,7 +5753,6 @@ lebensmitteleinzelhaendlern
 lebensmitteleinzelhaendlers
 lebensmittelfachgrosshandel
 lebensmittelgrossgeschaefte
-lebensmittelgrosshandlungen
 lebensmittelgrosshandlungen
 lebensmittelhandelskonzerne
 lebensmittelhaendlerehepaar
@@ -5877,7 +5869,6 @@ leuchtstoffroehrenschaltung
 leuchtturmversorgungsschiff
 lichtbogenhandschweissungen
 lichtbogenloescheinrichtung
-lichtbogenschmelzschweissen
 lichtbogenschmelzschweissen
 lichtbogenschweissleitungen
 lichtbogenschweissverfahren
@@ -7546,7 +7537,6 @@ ratenzahlungsvereinbarungen
 rationalisierungskommission
 rationalisierungskuratorium
 rationalisierungsmassnahmen
-rationalisierungsmassnahmen
 rationalisierungspotentiale
 rationalisierungspotenziale
 rationalisierungsstrategien
@@ -7830,7 +7820,6 @@ restlichtverstaerkerkameras
 restmuellverbrennungsanlage
 restrukturierungsempfehlung
 restrukturierungsmanagement
-restrukturierungsmassnahmen
 restrukturierungsmassnahmen
 restrukturierungsprogrammen
 restrukturierungsspezialist
@@ -8474,7 +8463,6 @@ selbstaufloesungserklaerung
 selbstbedienungseinrichtung
 selbstbedienungsgaststaette
 selbstbedienungsgeschaeften
-selbstbedienungsgrosshandel
 selbstbedienungsgrosshandel
 selbstbedienungsmentalitaet
 selbstbedienungsrestaurants
@@ -9190,11 +9178,9 @@ strassenverkehrsanbindungen
 strassenverkehrsanspruechen
 strassenverkehrsausschusses
 strassenverkehrsbeteiligung
-strassenverkehrsbeteiligung
 strassenverkehrseinfluessen
 strassenverkehrsgefaehrdung
 strassenverkehrsgeraeuschen
-strassenverkehrsknotenpunkt
 strassenverkehrsknotenpunkt
 strassenverkehrsministerium
 strassenverkehrsteilnehmern
@@ -9202,10 +9188,8 @@ strassenverkehrsteilnehmers
 strassenverkehrsuebergaenge
 strassenverkehrsunternehmen
 strassenverkehrsverstoessen
-strassenverkehrsverstoessen
 strassenverkehrszulassungen
 strassenverwaltungsbehoerde
-strassenweltmeisterschaften
 strassenweltmeisterschaften
 strassenwinterdienstsatzung
 streckenbegrenzungselemente

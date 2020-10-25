@@ -1162,7 +1162,6 @@ aussendienstmitarbeiterin
 aussendreiviertelposition
 aussenflaechenverschalung
 aussenhandelsaktivitaeten
-aussenhandelsfinanzierung
 aussenhandelsgesellschaft
 aussenhandelsinstrumenten
 aussenhandelskommissariat
@@ -1192,7 +1191,6 @@ aussenwirtschaftsbeirates
 aussenwirtschaftsberatern
 aussenwirtschaftsberatung
 aussenwirtschaftsfreiheit
-aussenwirtschaftsgesetzes
 aussenwirtschaftsgesetzes
 aussenwirtschaftskontakte
 aussenwirtschaftsleitbild
@@ -4027,7 +4025,6 @@ einheitsschulbestrebungen
 einheitsseitenverhaeltnis
 einheitssportorganisation
 einheitsstrassenbahnwagen
-einheitsstrassenbahnwagen
 einheitstouristenbewegung
 einheitswurzelstatistiken
 einigungsstellenverfahren
@@ -6143,7 +6140,6 @@ frauenfortschrittsbericht
 frauenfreundschaftsgruppe
 frauenfruehstueckstreffen
 frauenfussballabteilungen
-frauenfussballabteilungen
 frauenfussballspielklasse
 frauenfussballweltmeister
 frauenfussballwettbewerbe
@@ -6353,7 +6349,6 @@ fruehembryonalentwicklung
 frueherkennungsinitiative
 frueherkennungsinstrument
 frueherkennungsmassnahmen
-frueherkennungsmassnahmen
 frueherkennungspotenziale
 fruehfoerdereinrichtungen
 fruehfoerderungsprogramme
@@ -6475,15 +6470,12 @@ fussballmanagementspielen
 fussballmaennermannschaft
 fussballnachwuchsakademie
 fussballnationalspielerin
-fussballnationalspielerin
 fussballnationaltorhueter
-fussballnationaltrainerin
 fussballnationaltrainerin
 fussballnationalverbaende
 fussballolympiamannschaft
 fussballortsmeisterschaft
 fussballpersoenlichkeiten
-fussballpokalwettbewerbes
 fussballpokalwettbewerbes
 fussballprofigewerkschaft
 fussballregionalverbandes
@@ -6498,7 +6490,6 @@ fussballtrainingsstaetten
 fussballvereinsmannschaft
 fussballvereinspraesident
 fussballvereinswettbewerb
-fussballweltmeisterschaft
 fussballweltmeisterschaft
 fussballzusammenfassungen
 fussbodenheizungssystemen
@@ -7669,7 +7660,6 @@ gleichstellungsinitiative
 gleichstellungsinstrument
 gleichstellungskommission
 gleichstellungsmassnahmen
-gleichstellungsmassnahmen
 gleichstellungsministerin
 gleichstellungsparadigmas
 gleichstellungsrichtlinie
@@ -7816,7 +7806,6 @@ grossratsvizepraesidentin
 grossbuchstabenkonvention
 grossschifffahrtsschleuse
 grosscontainertechnologie
-grosseinkaufsgesellschaft
 grosseinzugsgebietsgrenze
 groessenausschlussmembran
 groessenklassifizierungen
@@ -7839,7 +7828,6 @@ grossindustriellenverband
 grossindustrieunternehmen
 grossinvestitionsprogramm
 grosskreditteilobergrenze
-grosskuecheneinrichtungen
 grosskuechengrossprojekte
 grosskuechenmitarbeiterin
 grosslinienschiffsentwurf
@@ -7857,10 +7845,8 @@ grossraumverkehrsflugzeug
 grossraumwirtschaftslehre
 grossrechnerarchitekturen
 grossrundfunksendernetzes
-grossschifffahrtsschleuse
 grossschifffahrtsstrassen
 grossserienzwoelfzylinder
-grosssportveranstaltungen
 grosssportveranstaltungen
 grossstadtagglomerationen
 grossstadtkirchengemeinde
@@ -8375,7 +8361,6 @@ hauptstadtzusammensetzung
 hauptstrahlungsrichtungen
 hauptstrassenanschluessen
 hauptstrassenueberquerung
-hauptstrassenverbindungen
 hauptstrassenverbindungen
 hauptstromeinzugsgebieten
 haupttaetigkeitsbereichen
@@ -10508,7 +10493,6 @@ konsolidierungsbehandlung
 konsolidierungsfaehigkeit
 konsolidierungsgespraeche
 konsolidierungsmanagement
-konsolidierungsmassnahmen
 konsolidierungsmassnahmen
 konsolidierungspotentiale
 konsolidierungsstrategien
@@ -12863,7 +12847,6 @@ metallproduktionsbetriebe
 metallreinigungsverfahren
 metallschichtwiderstaende
 metallschutzgasschweissen
-metallschutzgasschweissen
 metallsicherheitsstreifen
 metallspielwarenfabrikant
 metalltraegerkonstruktion
@@ -13251,7 +13234,6 @@ modernisierungsgrundlagen
 modernisierungsinteressen
 modernisierungskommission
 modernisierungsleistungen
-modernisierungsmassnahmen
 modernisierungsmassnahmen
 modernisierungspotentiale
 modernisierungsprogrammen
@@ -17307,7 +17289,6 @@ sendeleistungsverstaerker
 sendewarteschlangenlaenge
 seniorenerholungsaktionen
 seniorenfussballabteilung
-seniorenfussballabteilung
 seniorenhandballabteilung
 seniorenmitwirkungsgesetz
 seniorenpflegeeinrichtung
@@ -17808,7 +17789,6 @@ sportgerichtsentscheidung
 sportgerichtsvorsitzender
 sportgeschichtsschreibung
 sportgrossveranstaltungen
-sportgrossveranstaltungen
 sportgymnastikdisziplinen
 sportklettermeisterschaft
 sportkreismeisterschaften
@@ -17957,7 +17937,6 @@ stabilisierungselektronik
 stabilisierungsfunktionen
 stabilisierungsinitiative
 stabilisierungsleistungen
-stabilisierungsmassnahmen
 stabilisierungsmassnahmen
 stabilisierungspotentiale
 stabilisierungsprogrammen
@@ -18449,7 +18428,6 @@ strassenbaugrossprojekten
 strassenbeleuchtungskabel
 strassenbeleuchtungsnetze
 strassenbenutzungsabgaben
-strassenbenutzungsabgaben
 strassenbenutzungsgebuehr
 strassenbenutzungspflicht
 strassenbetriebsfahrzeuge
@@ -18502,7 +18480,6 @@ strassenverkehrsanschluss
 strassenverkehrsaufkommen
 strassenverkehrsbedeutung
 strassenverkehrsbehoerden
-strassenverkehrsbehoerden
 strassenverkehrsbelastung
 strassenverkehrsbetrieben
 strassenverkehrsdirektion
@@ -18510,17 +18487,13 @@ strassenverkehrsgebuehren
 strassenverkehrsmeldungen
 strassenverkehrsordnungen
 strassenverkehrsprojekten
-strassenverkehrsprojekten
 strassenverkehrssituation
 strassenverkehrsstatistik
 strassenverkehrstelematik
-strassenverkehrstelematik
-strassenverkehrsunfaellen
 strassenverkehrsunfaellen
 strassenverkehrszulassung
 strassenverwaltungsgesetz
 strassenverwaltungsstelle
-strassenweltmeisterschaft
 strassenweltmeisterschaft
 strassenwettermessstellen
 strassenwiederherstellung
@@ -19347,7 +19320,6 @@ ueberbrueckungsfunktionen
 ueberbrueckungskupplungen
 ueberbrueckungsleistungen
 ueberbrueckungsmassnahmen
-ueberbrueckungsmassnahmen
 ueberbrueckungsphaenomene
 ueberbrueckungstatbestand
 ueberbrueckungstaetigkeit
@@ -19913,7 +19885,6 @@ unternehmensrentabilitaet
 unternehmensrepraesentant
 unternehmensrepraesentanz
 unternehmensschliessungen
-unternehmensschliessungen
 unternehmensschwergewicht
 unternehmensschwerpunkten
 unternehmensschwerpunktes
@@ -20034,7 +20005,6 @@ unterstuetzungskundgebung
 unterstuetzungsleistungen
 unterstuetzungsmanagement
 unterstuetzungsmannschaft
-unterstuetzungsmassnahmen
 unterstuetzungsmassnahmen
 unterstuetzungsnetzwerkes
 unterstuetzungsoffizieren
@@ -20351,7 +20321,6 @@ verdienststrukturerhebung
 vereinsbundesvorsitzender
 vereinsfoerderrichtlinien
 vereinsfuehrungsmitglieds
-vereinsfussballwettbewerb
 vereinsfussballwettbewerb
 vereinsgeneralversammlung
 vereinsgeschaeftsfuehrung
@@ -21363,7 +21332,6 @@ wahrscheinlichkeitsgraden
 wahrscheinlichkeitsgrades
 wahrscheinlichkeitsinhalt
 wahrscheinlichkeitsmassen
-wahrscheinlichkeitsmassen
 wahrscheinlichkeitsmasses
 wahrscheinlichkeitsmodell
 wahrscheinlichkeitsmuster
@@ -22035,7 +22003,6 @@ wiederaufstellungsprojekt
 wiederaufzeichnungsskript
 wiederausbreitungszentrum
 wiederbelebungsfaehigkeit
-wiederbelebungsmassnahmen
 wiederbelebungsmassnahmen
 wiederbelegungsmassnahmen
 wiederbeschaffungsaufwand
