@@ -15,12 +15,12 @@ let lastHasUmlauts = undefined;
 let words = "";
 
 function getInvalidChars() {
-    return stringToLowerCase(invalid.value + input.value.replaceAll(wildCardRegex, ""));
+    return stringToLowerCase(invalid.value + input.value.replace(wildCardRegex, ""));
 }
 
 function getRegex() {
     const invalidChars = "[^" + getInvalidChars() + "]";
-    const regexStr = input.value.replaceAll(wildCardRegex, (s) => {
+    const regexStr = input.value.replace(wildCardRegex, (s) => {
         return invalidChars + (s.length > 1 ? "{" + s.length + "}" : "");
     });
     return new RegExp("^" + stringToLowerCase(regexStr) + "$", "ugm");
@@ -44,7 +44,7 @@ function updateWords() {
     if (!ready) return;
 
     ready = false;
-    input.value = input.value.replaceAll(whiteSpaceRegex, "");
+    input.value = input.value.replace(whiteSpaceRegex, "");
     const wordLength = input.value.length;
     if (wordLength < 1) {
         noWordsFound();
@@ -125,7 +125,7 @@ function stringContainsIgnoreCase(str, val) {
 
 const bigSzRegex = /ẞ/g;
 function stringToLowerCase(str) {
-    return hasUmlauts() ? str.toLowerCase().replaceAll(bigSzRegex, "ß") : str.toLowerCase();
+    return hasUmlauts() ? str.toLowerCase().replace(bigSzRegex, "ß") : str.toLowerCase();
 }
 
 function getParamFromURL(param, defaultValue) {
@@ -143,7 +143,7 @@ invalid.value = getParamFromURL("wrong", "");
 function setUrlParam(param, value) {
     let newStr = param + "=" + encodeURIComponent(value);
     let changed = false;
-    let url = window.location.href.replaceAll(new RegExp("([\?&])" + param + "=[^&#]*", "g"), (str, args) => {
+    let url = window.location.href.replace(new RegExp("([\?&])" + param + "=[^&#]*", "g"), (str, args) => {
         if (changed || value === "") return "";
         changed = true;
         return str.substring(0, 1) + newStr;
@@ -171,3 +171,4 @@ input.onchange = () => {
 invalid.onchange = () => {
     setUrlParam("wrong", invalid.value);
 }
+
