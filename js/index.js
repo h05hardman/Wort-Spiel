@@ -12,7 +12,7 @@ const whiteSpaceRegex = /\s+/g
 
 let lastWordLength = 0;
 let lastHasUmlauts = undefined;
-let words = "";
+let words = [];
 
 function getInvalidChars() {
     return stringToLowerCase(invalid.value + input.value.replace(wildCardRegex, ""));
@@ -23,7 +23,7 @@ function getRegex() {
     const regexStr = input.value.replace(wildCardRegex, (s) => {
         return invalidChars + (s.length > 1 ? "{" + s.length + "}" : "");
     });
-    return new RegExp("^" + stringToLowerCase(regexStr) + "$", "ugm");
+    return new RegExp("^" + stringToLowerCase(regexStr) + "$", hasUmlauts() ? "u" : "");
 }
 
 function isGerman() {
@@ -62,10 +62,10 @@ function updateWords() {
                     if (status === 0 || (status >= 200 && status < 400)) {
                         lastWordLength = wordLength;
                         lastHasUmlauts = umlautsBoo;
-                        words = reader.responseText;
+                        words = reader.responseText.split("\n");
                         onWordsLoaded();
                     } else {
-                        words = "";
+                        words = [];
                         noWordsFound();
                     }
                 }
@@ -82,22 +82,26 @@ function onWordsLoaded() {
 
     const letters = new Map();
 
-    const matches = words.match(regex);
-    if (matches !== null && matches.length > 0) {
-        let matchList = matches.length + " " + (isGerman() ? "passende Wörter" : "matching words") + ":<ul class='match-list'>";
-        matches.forEach(match => {
+
+    let count = 0;
+    let matchList = "";
+    words.forEach(word => {
+        if (regex.test(word)) {
+            count++;
             let used = invalidChars;
-            for (let j = 0; j < match.length; j++) {
-                const char = match.charAt(j);
+            for (let j = 0; j < word.length; j++) {
+                const char = word.charAt(j);
                 if (!stringContainsIgnoreCase(used, char)) {
                     letters.set(char, letters.has(char) ? letters.get(char) + 1 : 1);
                     used += char;
                 }
             }
-            matchList += "<li>" + match + "</li>";
-        });
+            matchList += "<li>" + word + "</li>";
+        }
+    });
 
-        wordOutput.innerHTML = matchList + "</ul>";
+    if (count > 0) {
+        wordOutput.innerHTML = count + " " + (isGerman() ? "passende Wörter" : "matching words") + ":<ul class='match-list'>" + matchList + "</ul>";
 
         // sort by value
         const lettersSorted = new Map([...letters.entries()].sort((a, b) => b[1] - a[1]));
