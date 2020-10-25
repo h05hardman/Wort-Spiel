@@ -3266,7 +3266,6 @@ stopp
 stoer
 story
 stoss
-stoss
 straf
 stroh
 strom
