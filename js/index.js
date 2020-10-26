@@ -39,7 +39,7 @@ function hasUmlauts() {
 }
 
 function getWordsFolder() {
-    return isGerman() ? (hasUmlauts() ? "words_de/" : "words_de_only_a-z/") : "../words_" + getLanguage() + "/";
+    return isGerman() ? (hasUmlauts() ? "words/words_de/" : "words/words_de_only_a-z/") : "../words/words_" + getLanguage() + "/";
 }
 
 let ready = true;
