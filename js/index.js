@@ -98,12 +98,16 @@ function onWordsLoaded() {
                     used += char;
                 }
             }
-            matchList += "<li>" + word + "</li>";
+            if (count < 100) {
+                matchList += "<li>" + word + "</li>";
+            } else if (count === 100) {
+                matchList += "<li>...</li>"; //to show something is missing
+            }
         }
     });
 
     if (count > 0) {
-        wordOutput.innerHTML = count + " " + (isGerman() ? "passende Wörter" : "matching words") + ":<ul class='match-list'>" + matchList + "</ul>";
+        wordOutput.innerHTML = count + (isGerman() ? " passende Wörter" : " matching words") + ":<ul class='match-list'>" + matchList + "</ul>";
 
         // sort by value
         const lettersSorted = new Map([...letters.entries()].sort((a, b) => b[1] - a[1]));

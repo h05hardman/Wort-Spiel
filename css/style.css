@@ -110,6 +110,5 @@ body {
 }
 
 .match-list {
-    max-height: 313px;
     overflow: auto;
 }
