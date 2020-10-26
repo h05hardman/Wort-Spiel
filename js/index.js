@@ -6,16 +6,18 @@ const wordOutput = document.getElementById("output2");
 const umlautCheckbox = isGerman() ? document.getElementById("has-umlauts") : null;
 
 //to replace "_" with regex
-const wildCardRegex = /[_-]+/g;
+const wildCardRegex = /[_-]/g;
 //to strip whitespaces
-const whiteSpaceRegex = /\s+/g
+const whiteSpaceRegex = /\s+/g;
+//to remove duplicate chars:
+const duplicateCharsRegex = /(.)(?=.*\1)/g;
 
 let lastWordLength = 0;
 let lastHasUmlauts = undefined;
 let words = [];
 
 function getInvalidChars() {
-    return stringToLowerCase(invalid.value + input.value.replace(wildCardRegex, ""));
+    return stringToLowerCase(invalid.value + input.value.replace(wildCardRegex, "")).replace(duplicateCharsRegex, "");
 }
 
 function getRegex() {
@@ -169,10 +171,10 @@ if (isGerman()) {
 }
 
 input.onchange = () => {
-    setUrlParam("input", input.value);
+    setUrlParam("input", input.value.replace(whiteSpaceRegex, "").replace(wildCardRegex, "_"));
 }
 
 invalid.onchange = () => {
-    setUrlParam("wrong", invalid.value);
+    setUrlParam("wrong", invalid.value.replace(duplicateCharsRegex, "").replace(whiteSpaceRegex, "").replace(wildCardRegex, "_"));
 }
 
