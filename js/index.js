@@ -6,7 +6,9 @@ const wordOutput = document.getElementById("output2");
 const umlautCheckbox = isGerman() ? document.getElementById("has-umlauts") : null;
 
 //to replace "_" with regex
-const wildCardRegex = /[_-]/g;
+const wildCardRegex = /[_?-]/g;
+//to improve matching:
+const WildCardMatch = /^[_?-]+$/; //should be like wildCardRegex.
 //to strip whitespaces
 const whiteSpaceRegex = /\s+/g;
 //to remove duplicate chars:
@@ -78,17 +80,16 @@ function updateWords() {
 }
 
 function onWordsLoaded() {
-    const regex = getRegex();
-
     const invalidChars = getInvalidChars();
-
     const letters = new Map();
 
+    const alwaysMatches = invalidChars.length === 0 && wildCardRegex.test(input.value);
+    const regex = getRegex();
 
     let count = 0;
     let matchList = "";
     words.forEach(word => {
-        if (regex.test(word)) {
+        if (alwaysMatches || regex.test(word)) {
             count++;
             let used = invalidChars;
             for (let j = 0; j < word.length; j++) {
@@ -181,4 +182,3 @@ input.onchange = () => {
 invalid.onchange = () => {
     setUrlParam("wrong", invalid.value.replace(duplicateCharsRegex, "").replace(whiteSpaceRegex, "").replace(wildCardRegex, "_"));
 }
-
