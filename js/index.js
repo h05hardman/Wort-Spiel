@@ -6,9 +6,9 @@ const wordOutput = document.getElementById("output2");
 const umlautCheckbox = isGerman() ? document.getElementById("has-umlauts") : null;
 
 //to replace "_" with regex
-const wildCardRegex = /[_?-]/g;
-//to improve matching:
-const WildCardMatch = /^[_?-]+$/; //should be like wildCardRegex.
+const wildCardRegex = /[_?-]+/g;
+//to replace ?, or - with _
+const notRealWildCardRegex = /[-?]/g;
 //to strip whitespaces
 const whiteSpaceRegex = /\s+/g;
 //to remove duplicate chars:
@@ -83,7 +83,10 @@ function onWordsLoaded() {
     const invalidChars = getInvalidChars();
     const letters = new Map();
 
-    const alwaysMatches = invalidChars.length === 0 && wildCardRegex.test(input.value);
+    const inputWithoutWildCards = input.value.replace(wildCardRegex, "");
+    const alwaysMatches = invalidChars.length === 0 && inputWithoutWildCards.length === 0;
+    const maxOneMatch = inputWithoutWildCards.length === input.value.length;
+
     const regex = getRegex();
 
     let count = 0;
@@ -91,6 +94,14 @@ function onWordsLoaded() {
     words.forEach(word => {
         if (alwaysMatches || regex.test(word)) {
             count++;
+
+            if (count < 100) {
+                matchList += "<li>" + word + "</li>";
+                if (maxOneMatch) return;
+            } else if (count === 100) {
+                matchList += "<li>...</li>"; //to show something is missing
+            }
+
             let used = invalidChars;
             for (let j = 0; j < word.length; j++) {
                 const char = word.charAt(j);
@@ -99,16 +110,11 @@ function onWordsLoaded() {
                     used += char;
                 }
             }
-            if (count < 100) {
-                matchList += "<li>" + word + "</li>";
-            } else if (count === 100) {
-                matchList += "<li>...</li>"; //to show something is missing
-            }
         }
     });
 
     if (count > 0) {
-        wordOutput.innerHTML = count + (isGerman() ? " passende Wörter" : " matching words") + ":<ul class='match-list'>" + matchList + "</ul>";
+        wordOutput.innerHTML = count + " " + getMatchingWordsString() + ":<ul class='match-list'>" + matchList + "</ul>";
 
         // sort by value
         const lettersSorted = new Map([...letters.entries()].sort((a, b) => b[1] - a[1]));
@@ -123,6 +129,10 @@ function onWordsLoaded() {
         noWordsFound();
     }
     ready = true;
+}
+
+function getMatchingWordsString() {
+    return (isGerman() ? "passende Wörter" : "matching words");
 }
 
 function noWordsFound() {
@@ -176,9 +186,9 @@ if (isGerman()) {
 }
 
 input.onchange = () => {
-    setUrlParam("input", input.value.replace(whiteSpaceRegex, "").replace(wildCardRegex, "_"));
+    setUrlParam("input", stringToLowerCase(input.value).replace(whiteSpaceRegex, "").replace(notRealWildCardRegex, "_"));
 }
 
 invalid.onchange = () => {
-    setUrlParam("wrong", invalid.value.replace(duplicateCharsRegex, "").replace(whiteSpaceRegex, "").replace(wildCardRegex, "_"));
+    setUrlParam("wrong", stringToLowerCase(invalid.value).replace(whiteSpaceRegex, "").replace(wildCardRegex, "")).replace(duplicateCharsRegex, "");
 }
