@@ -114,7 +114,7 @@ function onWordsLoaded() {
     });
 
     if (count > 0) {
-        wordOutput.innerHTML = count + " " + getMatchingWordsString() + ":<ul class='match-list'>" + matchList + "</ul>";
+        wordOutput.innerHTML = count + " " + getMatchingWordsString(count) + ":<ul class='match-list'>" + matchList + "</ul>";
 
         // sort by value
         const lettersSorted = new Map([...letters.entries()].sort((a, b) => b[1] - a[1]));
@@ -131,8 +131,11 @@ function onWordsLoaded() {
     ready = true;
 }
 
-function getMatchingWordsString() {
-    return (isGerman() ? "passende Wörter" : "matching words");
+function getMatchingWordsString(count) {
+    const countIsOne = count === 1;
+    return (isGerman() ?
+        countIsOne ? "passendes Wort" : "passende Wörter" :
+        countIsOne ? "matching word" : "matching words");
 }
 
 function noWordsFound() {
