@@ -19,7 +19,7 @@ let lastHasUmlauts = undefined;
 let words = [];
 
 function getInvalidChars() {
-    return (invalid.value + input.value.replace(wildCardRegex, "")).toLowerCase().replace(duplicateCharsRegex, "");
+    return (invalid.value + input.value.replace(wildCardRegex, "")).toLowerCase().replace(whiteSpaceRegex, "").replace(duplicateCharsRegex, "");
 }
 
 function getRegex() {
