@@ -3,12 +3,13 @@
 
 #file with all words, one in each line:
 input="full_wordlist.txt"
+#not present file:
 tmp="full_wordlist_tmp.txt"
 
+#make everything lowercase:
+sed -i "s/.*/\L&/g" $input
 #remove duplicates and sort words:
 sort -u $input >> $tmp
-#make everything lowercase:
-sed -i "s/.*/\L&/g" $tmp
 
 while read word; do
     echo "$word" >> "${#word}.txt"
