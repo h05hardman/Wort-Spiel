@@ -19,15 +19,15 @@ let lastHasUmlauts = undefined;
 let words = [];
 
 function getInvalidChars() {
-    return stringToLowerCase(invalid.value + input.value.replace(wildCardRegex, "")).replace(duplicateCharsRegex, "");
+    return (invalid.value + input.value.replace(wildCardRegex, "")).toLowerCase().replace(duplicateCharsRegex, "");
 }
 
 function getRegex() {
     const invalidChars = "[^" + getInvalidChars() + "]";
-    const regexStr = input.value.replace(wildCardRegex, (s) => {
+    const regexStr = input.value.toLowerCase().replace(wildCardRegex, (s) => {
         return invalidChars + (s.length > 1 ? "{" + s.length + "}" : "");
     });
-    return new RegExp("^" + stringToLowerCase(regexStr) + "$", hasUmlauts() ? "u" : "");
+    return new RegExp("^" + regexStr + "$", hasUmlauts() ? "u" : "");
 }
 
 function isGerman() {
@@ -86,7 +86,7 @@ function onWordsLoaded() {
 
     const inputWithoutWildCards = input.value.replace(wildCardRegex, "");
     if (inputWithoutWildCards.length === input.value.length) { //max one word, without wildcard, just search for it
-        let word = stringToLowerCase(inputWithoutWildCards);
+        let word = inputWithoutWildCards.toLowerCase();
         if (binarySearch(words, word)) { //if the word is present
             count = 1;
             matchList += "<li>" + word + "</li>";
@@ -169,12 +169,7 @@ function noWordsFound() {
 }
 
 function stringContainsIgnoreCase(str, val) {
-    return str.indexOf(val) !== -1 || stringToLowerCase(str).indexOf(stringToLowerCase(val)) !== -1;
-}
-
-const bigSzRegex = /ẞ/g;
-function stringToLowerCase(str) {
-    return hasUmlauts() ? str.toLowerCase().replace(bigSzRegex, "ß") : str.toLowerCase();
+    return str.indexOf(val) !== -1 || str.toLowerCase().indexOf(val.toLowerCase()) !== -1;
 }
 
 function getParamFromURL(param, defaultValue) {
@@ -214,9 +209,9 @@ if (isGerman()) {
 }
 
 input.onchange = () => {
-    setUrlParam("input", stringToLowerCase(input.value).replace(whiteSpaceRegex, "").replace(notRealWildCardRegex, "_"));
+    setUrlParam("input", input.value.toLowerCase().replace(whiteSpaceRegex, "").replace(notRealWildCardRegex, "_"));
 }
 
 invalid.onchange = () => {
-    setUrlParam("wrong", stringToLowerCase(invalid.value).replace(whiteSpaceRegex, "").replace(wildCardRegex, "")).replace(duplicateCharsRegex, "");
+    setUrlParam("wrong", invalid.value.toLowerCase().replace(whiteSpaceRegex, "").replace(wildCardRegex, "")).replace(duplicateCharsRegex, "");
 }
