@@ -19,7 +19,9 @@ let lastHasUmlauts = undefined;
 let words = [];
 
 function getInvalidChars() {
-    return (invalid.value + input.value.replace(wildCardRegex, "")).toLowerCase().replace(whiteSpaceRegex, "").replace(duplicateCharsRegex, "");
+    return (invalid.value + input.value.replace(wildCardRegex, "")).toLowerCase()
+        .replace(whiteSpaceRegex, "")
+        .replace(duplicateCharsRegex, "");
 }
 
 function getRegex() {
@@ -39,7 +41,9 @@ function hasUmlauts() {
 }
 
 function getWordsFolder() {
-    return isGerman() ? (hasUmlauts() ? "words/words_de/" : "words/words_de_only_a-z/") : "../words/words_" + getLanguage() + "/";
+    return isGerman()
+        ? (hasUmlauts() ? "words/words_de/" : "words/words_de_only_a-z/")
+        : "../words/words_" + getLanguage() + "/";
 }
 
 let ready = true;
@@ -120,10 +124,12 @@ function onWordsLoaded() {
     }
 
     if (count > 0) {
-        wordOutput.innerHTML = count + " " + getMatchingWordsString(count) + ":<ul class='match-list'>" + matchList + "</ul>";
+        wordOutput.innerHTML = count + " " + getMatchingWordsString(count)
+            + ":<ul class='match-list'>" + matchList + "</ul>";
 
         // sort by value
-        const lettersSorted = new Map([...letters.entries()].sort((a, b) => b[1] - a[1]));
+        const lettersSorted = new Map([...letters.entries()]
+            .sort((a, b) => b[1] - a[1]));
         let letterList = "<div class='letter-list'>\n";
         //TODO: Better print?:
         lettersSorted.forEach(((value, key) => {
@@ -164,7 +170,9 @@ function getMatchingWordsString(count) {
 }
 
 function noWordsFound() {
-    letterOutput.innerHTML = isGerman() ? "Keine passenden Wörter gefunden." :  "No matching words found.";
+    letterOutput.innerHTML = isGerman()
+        ? "Keine passenden Wörter gefunden."
+        :  "No matching words found.";
     wordOutput.innerHTML = "";
 }
 
@@ -209,9 +217,14 @@ if (isGerman()) {
 }
 
 input.onchange = () => {
-    setUrlParam("input", input.value.toLowerCase().replace(whiteSpaceRegex, "").replace(notRealWildCardRegex, "_"));
+    setUrlParam("input", input.value.toLowerCase()
+        .replace(whiteSpaceRegex, "")
+        .replace(notRealWildCardRegex, "_"));
 }
 
 invalid.onchange = () => {
-    setUrlParam("wrong", invalid.value.toLowerCase().replace(whiteSpaceRegex, "").replace(wildCardRegex, "")).replace(duplicateCharsRegex, "");
+    setUrlParam("wrong", invalid.value.toLowerCase()
+        .replace(whiteSpaceRegex, "")
+        .replace(wildCardRegex, "")
+        .replace(duplicateCharsRegex, ""));
 }
