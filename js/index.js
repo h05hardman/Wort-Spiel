@@ -107,12 +107,12 @@ function onWordsLoaded() {
                     matchList += "<li>...</li>"; //to show something is missing
                 }
 
-                let used = invalidChars;
+                let used = invalidChars.split(""); //faster than to clone the array
                 for (let j = 0; j < word.length; j++) {
-                    const char = word.charAt(j);
-                    if (!stringContainsIgnoreCase(used, char)) {
+                    const char = word[j];
+                    if (!used.includes(char)) {
                         letters.set(char, letters.has(char) ? letters.get(char) + 1 : 1);
-                        used += char;
+                        used.push(char);
                     }
                 }
             }
