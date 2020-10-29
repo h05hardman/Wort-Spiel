@@ -61,26 +61,32 @@ function updateWords() {
         if (lastWordLength === wordLength && lastHasUmlauts === umlautsBoo) {
             onWordsLoaded();
         } else {
-            const reader = new XMLHttpRequest() || new ActiveXObject("MSXML2.XMLHTTP");
-            reader.open("get", getWordsFolder() + wordLength + ".txt", true);
-            reader.onreadystatechange = function () {
-                // In local files, status is 0 upon success in Mozilla Firefox
-                if(reader.readyState === XMLHttpRequest.DONE) {
-                    let status = reader.status;
-                    if (status === 0 || (status >= 200 && status < 400)) {
-                        lastWordLength = wordLength;
-                        lastHasUmlauts = umlautsBoo;
-                        words = reader.responseText.split("\n");
-                        onWordsLoaded();
-                    } else {
-                        words = [];
-                        noWordsFound();
-                    }
+            readFile( getWordsFolder() + wordLength + ".txt", (success, response) => {
+                if (success) {
+                    lastWordLength = wordLength;
+                    lastHasUmlauts = umlautsBoo;
+                    words = response.split("\n");
+                    onWordsLoaded();
+                } else {
+                    words = [];
+                    noWordsFound();
                 }
-            };
-            reader.send(null);
+            });
         }
     }
+}
+
+function readFile(filename, callback) {//function callback(wasSuccessful, responseText)
+    const reader = new XMLHttpRequest() || new ActiveXObject("MSXML2.XMLHTTP");
+    reader.open("get", filename, true);
+    reader.onreadystatechange = function () {
+        // In local files, status is 0 upon success in Mozilla Firefox
+        if(reader.readyState === XMLHttpRequest.DONE) {
+            const status = reader.status;
+            callback(status === 0 || (status >= 200 && status < 400), reader.responseText);
+        }
+    };
+    reader.send(null);
 }
 
 function onWordsLoaded() {
