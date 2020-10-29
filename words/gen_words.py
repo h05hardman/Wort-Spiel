@@ -1,24 +1,22 @@
+#!/usr/bin/env python3
+# pylint: disable=invalid-name
+
 file = "full_wordlist.txt"
 
-# read lines
-text = open(file).read().lower()  # read text
-lines = text.splitlines()  # split into lines
-
-# sort lines unique
-lines_sorted = sorted(set(lines))
+text = open(file).read().lower()
+words = text.splitlines()
+words_sorted = sorted(set(words))  # sort words unique
 
 letters = {}
 
-for line in lines_sorted:
-    word = line
+for word in words_sorted:
     length = str(len(word))
     with open(length + ".txt", "a") as file:
         file.write(word)
         file.write("\n")
     print(word)
     m = letters.get(length, {})
-    for index in range(0, len(word)):
-        letter = word[index]
+    for index, letter in enumerate(word):
         if word.index(letter) is index:
             m[letter] = m.get(letter, 0) + 1
     letters[length] = m
