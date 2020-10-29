@@ -133,18 +133,17 @@ function onWordsLoaded() {
         });
     }
 
-    if (matchesAlways) {
-        count = words.length;
-        readFile(getWordsFolder() + words[0].length + "_letters.txt", (success, response) => {
-            letterOutput.innerHTML = response;
-        });
-    }
 
     if (count > 0) {
         wordOutput.innerHTML = count + " " + getMatchingWordsString(count)
             + ":<ul class='match-list'>" + matchList + "</ul>";
 
-        if (!matchesAlways) {
+        if (matchesAlways) {
+            count = words.length;
+            readFile(getWordsFolder() + words[0].length + "_letters.txt", (success, response) => {
+                letterOutput.innerHTML = response;
+            });
+        } else {
             // sort by value
             const lettersSorted = new Map([...letters.entries()]
                 .sort((a, b) => b[1] - a[1]));
