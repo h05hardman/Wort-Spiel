@@ -1,12 +1,13 @@
 
 .idea/*
+venv/
 
 #files used to gen things, but not needed:
 words/words_de/full_wordlist.txt
-words/words_de/gen_words.sh
+words/words_de/gen_words.py
 
 words/words_de_only_a-z/full_wordlist.txt
-words/words_de_only_a-z/gen_words.sh
+words/words_de_only_a-z/gen_words.py
 
 words/words_en/full_wordlist.txt
-words/words_en/gen_words.sh
+words/words_en/gen_words.py

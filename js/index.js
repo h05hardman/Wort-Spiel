@@ -93,8 +93,11 @@ function onWordsLoaded() {
     const letters = new Map();
     let count = 0;
     let matchList = "";
+    const invalidChars = getInvalidChars();
 
     const inputWithoutWildCards = input.value.replace(wildCardRegex, "");
+    const matchesAlways = invalidChars.length === 0 && inputWithoutWildCards.length === 0; //no letter input, only wildcards
+
     if (inputWithoutWildCards.length === input.value.length) { //max one word, without wildcard, just search for it
         let word = inputWithoutWildCards.toLowerCase();
         if (binarySearch(words, word)) { //if the word is present
@@ -102,30 +105,38 @@ function onWordsLoaded() {
             matchList += "<li>" + word + "</li>";
         }
     } else { //have to search
-        const invalidChars = getInvalidChars();
 
-        const alwaysMatches = invalidChars.length === 0 && inputWithoutWildCards.length === 0; //no letter input, only wildcards
         const regex = getRegex();
 
         words.forEach(word => {
-            if (alwaysMatches || regex.test(word)) {
+            if (matchesAlways || regex.test(word)) {
                 count++;
 
                 if (count < 100) {
                     matchList += "<li>" + word + "</li>";
                 } else if (count === 100) {
                     matchList += "<li>...</li>"; //to show something is missing
+                    if (matchesAlways) return;
                 }
 
-                let used = invalidChars.split(""); //faster than to clone the array
-                for (let j = 0; j < word.length; j++) {
-                    const char = word[j];
-                    if (!used.includes(char)) {
-                        letters.set(char, letters.has(char) ? letters.get(char) + 1 : 1);
-                        used.push(char);
+                if (!matchesAlways) {
+                    let used = invalidChars.split(""); //faster than to clone the array
+                    for (let j = 0; j < word.length; j++) {
+                        const char = word[j];
+                        if (!used.includes(char)) {
+                            letters.set(char, letters.has(char) ? letters.get(char) + 1 : 1);
+                            used.push(char);
+                        }
                     }
                 }
             }
+        });
+    }
+
+    if (matchesAlways) {
+        count = words.length;
+        readFile(getWordsFolder() + words[0].length + "_letters.txt", (success, response) => {
+            letterOutput.innerHTML = response;
         });
     }
 
@@ -133,16 +144,18 @@ function onWordsLoaded() {
         wordOutput.innerHTML = count + " " + getMatchingWordsString(count)
             + ":<ul class='match-list'>" + matchList + "</ul>";
 
-        // sort by value
-        const lettersSorted = new Map([...letters.entries()]
-            .sort((a, b) => b[1] - a[1]));
-        let letterList = "<div class='letter-list'>\n";
-        //TODO: Better print?:
-        lettersSorted.forEach(((value, key) => {
-            letterList += key + ": " + value + ", ";
-        }));
-        //close div and remove last ", "
-        letterOutput.innerHTML = letterList.substring(0, letterList.length - 2) + "</div>";
+        if (!matchesAlways) {
+            // sort by value
+            const lettersSorted = new Map([...letters.entries()]
+                .sort((a, b) => b[1] - a[1]));
+            let letterList = "";
+            //TODO: Better print?:
+            lettersSorted.forEach(((value, key) => {
+                letterList += key + ": " + value + ", ";
+            }));
+            //close div and remove last ", "
+            letterOutput.innerHTML = letterList.substring(0, letterList.length - 2);
+        }
     } else {
         noWordsFound();
     }
