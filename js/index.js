@@ -238,6 +238,7 @@ input.onchange = () => {
     setUrlParam("input", input.value.toLowerCase()
         .replace(whiteSpaceRegex, "")
         .replace(notRealWildCardRegex, "_"));
+    updateWords();
 }
 
 invalid.onchange = () => {
@@ -245,4 +246,5 @@ invalid.onchange = () => {
         .replace(whiteSpaceRegex, "")
         .replace(wildCardRegex, "")
         .replace(duplicateCharsRegex, ""));
+    updateWords();
 }
