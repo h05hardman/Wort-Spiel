@@ -29,19 +29,43 @@ body {
     padding: 12px;
     box-sizing: border-box;
     font-size: 20px;
-    border: 2px solid deepskyblue;
+    border-width: 2px;
+    border-style: solid;
     border-radius: 10px;
     background-color: #0e0e0e;
     color: #fdfdfd;
     float: right;
 }
 
-.button:hover {
-    border: 2px solid #58cfff;
+.button-blue {
+    border-color: rgba(0, 191, 255, 0.8);
+}
+
+.button-blue:hover {
+    border-color: rgba(0, 191, 255, 1);
+}
+
+.button-yellow {
+    margin-right: 15px;
+    border-color: rgba(255, 255, 0, 0.8);
+}
+
+.button-yellow:hover {
+    border-color: rgba(255, 255, 0, 1);
+}
+
+.button-green {
+    margin-right: 15px;
+    border-color: rgba(0, 255, 0, 0.8);
+}
+
+.button-green:hover {
+    border-color: rgba(0, 255, 0, 1);
 }
 
 .button:active {
-    border: 1px solid whitesmoke;
+    border-width: 1px;
+    border-color: whitesmoke;
 }
 
 .output-text {

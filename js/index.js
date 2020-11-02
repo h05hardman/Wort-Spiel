@@ -235,16 +235,37 @@ if (isGerman()) {
 }
 
 input.onchange = () => {
-    setUrlParam("input", input.value.toLowerCase()
-        .replace(whiteSpaceRegex, "")
-        .replace(notRealWildCardRegex, "_"));
+    saveInput();
     updateWords();
 }
 
+function saveInput() {
+    setUrlParam("input", input.value.toLowerCase()
+        .replace(whiteSpaceRegex, "")
+        .replace(notRealWildCardRegex, "_"));
+}
+
 invalid.onchange = () => {
+    saveInvalid();
+    updateWords();
+}
+
+function saveInvalid() {
     setUrlParam("wrong", invalid.value.toLowerCase()
         .replace(whiteSpaceRegex, "")
         .replace(wildCardRegex, "")
         .replace(duplicateCharsRegex, ""));
-    updateWords();
+}
+
+function resetInput() {
+    input.value = "";
+    invalid.value = "";
+    setUrlParam("input", "");
+    setUrlParam("wrong", "");
+}
+
+function reloadPage() {
+    saveInput();
+    saveInvalid();
+    window.location.reload();
 }
