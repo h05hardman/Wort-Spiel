@@ -117,6 +117,7 @@ altem
 alten
 alter
 altes
+altpo
 altre
 ammen
 amors
@@ -363,6 +364,7 @@ billy
 binde
 binom
 binse
+bioei
 birgt
 birke
 birne
@@ -771,6 +773,7 @@ eifer
 eigen
 eigne
 eilau
+eilei
 eilen
 eilig
 eilst
@@ -837,6 +840,7 @@ eprom
 epson
 erbat
 erbau
+erbei
 erben
 erbes
 erbin
@@ -844,6 +848,7 @@ erbot
 erbse
 erbst
 erbte
+erdau
 erdei
 erden
 erdet
@@ -977,6 +982,7 @@ fette
 fetts
 feuer
 feure
+fezen
 fiats
 fibel
 ficht
@@ -1516,6 +1522,7 @@ hurte
 husar
 huste
 husum
+hutau
 hutes
 huthi
 hydra
@@ -1699,6 +1706,7 @@ kauft
 kaure
 kaust
 kaute
+kbaud
 kbyte
 kecke
 kegel
@@ -2503,6 +2511,7 @@ ovale
 oxide
 oxids
 oxyde
+oxyds
 ozean
 ozons
 paare
@@ -2873,6 +2882,7 @@ rosen
 rosig
 roste
 rotau
+rotei
 rotem
 roten
 roter
@@ -3268,6 +3278,7 @@ surfe
 surft
 surre
 surrt
+suses
 sushi
 svens
 swapo
@@ -3296,6 +3307,7 @@ tales
 talgs
 talks
 talon
+tands
 tange
 tango
 tangs
@@ -3322,6 +3334,7 @@ tatau
 tatei
 taten
 tatet
+tathi
 tatst
 tatze
 taube
@@ -3888,6 +3901,7 @@ zueck
 zuege
 zuend
 zugab
+zugei
 zuges
 zugig
 zumal

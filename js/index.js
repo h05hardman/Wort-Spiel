@@ -105,7 +105,6 @@ function onWordsLoaded() {
             matchList += "<li>" + word + "</li>";
         }
     } else { //have to search
-
         const regex = getRegex();
 
         words.forEach(word => {
