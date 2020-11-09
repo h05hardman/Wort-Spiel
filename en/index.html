@@ -11,19 +11,26 @@
 </head>
 
 <body>
-    <label class="label" for="input">Input (Use "_" for unknown letters):</label><br>
+    <label class="no-select text-input-label" for="input">Input (Use "_" for unknown letters):</label><br>
     <input class="text-input" id="input">
     <br>
 
-    <label class="label" for="invalid">Wrong letters:</label><br>
+    <label class="no-select text-input-label" for="invalid">Wrong letters:</label><br>
     <input class="text-input" id="invalid">
-    <br>
 
-    <br>
+    <br><br>
 
-    <input type="button" class="button" id="submit" value="Input" onclick="updateWords()"/>
-    <input type="button" class="button button-green" id="reload" value="Reload" onclick="reloadPage()"/>
-    <input type="button" class="button button-yellow" id="reset" value="Reset" onclick="resetInput()"/>
+    <div class="tooltip no-select">
+        <label class="cbl float-left no-select" for="crossword-mode">
+            <input type="checkbox" class="cb no-select" id="crossword-mode" name="crossword">
+            <span class="checkmark no-select"></span>
+            crossword mode
+        </label>
+        <span class="tooltip-text no-select">The letters in the input field aren't limited to the known positions.</span>
+    </div>
+    <input type="button" class="no-select button button-blue" id="submit" value="Input" onclick="updateWords()"/>
+    <input type="button" class="no-select button button-green" id="reload" value="Reload" onclick="reloadPage()"/>
+    <input type="button" class="no-select button button-yellow" id="reset" value="Reset" onclick="resetInput()"/>
 
     <br><br><br><br>
 

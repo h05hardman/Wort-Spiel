@@ -2,6 +2,7 @@ const input = document.getElementById("input");
 const invalid = document.getElementById("invalid");
 const letterOutput = document.getElementById("output");
 const wordOutput = document.getElementById("output2");
+const crosswordCheckbox = document.getElementById("crossword-mode");
 //only in german:
 const umlautCheckbox = isGerman() ? document.getElementById("has-umlauts") : null;
 
@@ -19,7 +20,8 @@ let lastHasUmlauts = undefined;
 let words = [];
 
 function getInvalidChars() {
-    return (invalid.value + input.value.replace(wildCardRegex, "")).toLowerCase()
+    return ((isCrossWordMode() ? "" : input.value.replace(wildCardRegex, "")) + invalid.value)
+        .toLowerCase()
         .replace(whiteSpaceRegex, "")
         .replace(duplicateCharsRegex, "");
 }
@@ -40,6 +42,10 @@ function hasUmlauts() {
     return isGerman() && umlautCheckbox.checked;
 }
 
+function isCrossWordMode() {
+    return crosswordCheckbox.checked;
+}
+
 function getWordsFolder() {
     return isGerman()
         ? (hasUmlauts() ? "words/words_de/" : "words/words_de_only_a-z/")
@@ -50,7 +56,6 @@ let ready = true;
 //This gets called on button press
 function updateWords() {
     if (!ready) return;
-
     ready = false;
     input.value = input.value.replace(whiteSpaceRegex, "");
     const wordLength = input.value.length;
@@ -65,6 +70,7 @@ function updateWords() {
                 if (success) {
                     lastWordLength = wordLength;
                     lastHasUmlauts = umlautsBoo;
+
                     words = response.split("\n");
                     onWordsLoaded();
                 } else {
@@ -208,6 +214,7 @@ if (isGerman()) {
 }
 input.value = getParamFromURL("input", "");
 invalid.value = getParamFromURL("wrong", "");
+crosswordCheckbox.checked = getParamFromURL("cw", "f") === "t"
 
 function setUrlParam(param, value) {
     let newStr = param + "=" + encodeURIComponent(value);
@@ -231,6 +238,10 @@ if (isGerman()) {
     umlautCheckbox.onchange = () => {
         setUrlParam("umlauts", hasUmlauts() ? "t" : "");
     }
+}
+
+crosswordCheckbox.onchange = () => {
+    setUrlParam("cw",  isCrossWordMode() ? "t" : "");
 }
 
 input.onchange = () => {
