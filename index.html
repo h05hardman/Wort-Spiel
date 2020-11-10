@@ -11,12 +11,14 @@
 </head>
 
 <body>
-    <label class="text-input-label no-select" for="input">Eingabe (Nutze "_" für nicht bekannte Buchstaben):</label><br>
+    <label class="text-input-label no-select" for="input">Eingabe (Nutze "_" für nicht bekannte Buchstaben):</label>
+    <br>
     <input class="text-input" id="input">
 
     <br>
 
-    <label class="text-input-label no-select" for="invalid">Falsche Buchstaben:</label><br>
+    <label class="text-input-label no-select" for="invalid">Falsche Buchstaben:</label>
+    <br>
     <input class="text-input" id="invalid">
 
     <br><br>
@@ -39,9 +41,21 @@
         <span class="tooltip-text no-select">Die Buchstaben im Eingabefeld können auch an anderen Stellen erneut auftauchen.</span>
     </div>
 
-    <input type="button" class="no-select button button-blue" id="submit" value="Eingabe" onclick="updateWords()"/>
-    <input type="button" class="no-select button button-green" id="reload" value="Reload" onclick="reloadPage()"/>
-    <input type="button" class="no-select button button-yellow" id="reset" value="Reset" onclick="resetInput()"/>
+
+    <div class="tooltip no-select button-container">
+        <input type="button" class="no-select button button-blue" id="submit" value="Eingabe" onclick="updateWords()"/>
+        <span class="tooltip-text no-select">Aktualisiere die Eingabe.</span>
+    </div>
+
+    <div class="tooltip no-select button-container">
+        <input type="button" class="no-select button button-green" id="reload" value="Reload" onclick="reloadPage()"/>
+        <span class="tooltip-text no-select">Lade die Seite neu, wenn etwas nicht richtig funktioniert.</span>
+    </div>
+
+    <div class="tooltip no-select button-container">
+        <input type="button" class="no-select button button-yellow" id="reset" value="Reset" onclick="resetInput()"/>
+        <span class="tooltip-text no-select">Setze alle Eingaben zurück.</span>
+    </div>
 
     <br><br><br><br>
 

@@ -28,14 +28,17 @@ body {
 }
 
 .button {
-    padding: 12px;
     box-sizing: border-box;
+    padding: 12px;
     font-size: 20px;
     border-width: 2px;
     border-style: solid;
     border-radius: 10px;
     background-color: #0e0e0e;
     color: #fdfdfd;
+}
+
+.button-container {
     float: right;
 }
 

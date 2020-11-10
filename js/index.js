@@ -10,7 +10,7 @@ const umlautCheckbox = isGerman() ? document.getElementById("has-umlauts") : nul
 const wildCardRegex = /[_?-]+/g;
 //to replace ?, or - with _
 const notRealWildCardRegex = /[-?]/g;
-//to strip whitespaces
+//to remove whitespaces
 const whiteSpaceRegex = /\s+/g;
 //to remove duplicate chars:
 const duplicateCharsRegex = /(.)(?=.*\1)/g;
