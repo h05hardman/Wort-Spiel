@@ -61,10 +61,12 @@ function updateWords() {
     const wordLength = input.value.length;
     if (wordLength < 1) {
         noWordsFound();
+        ready = true;
     } else {
         const umlautsBoo = hasUmlauts();
         if (lastWordLength === wordLength && lastHasUmlauts === umlautsBoo) {
             onWordsLoaded();
+            ready = true;
         } else {
             readFile( getWordsFolder() + wordLength + ".txt", (success, response) => {
                 if (success) {
@@ -77,6 +79,7 @@ function updateWords() {
                     words = [];
                     noWordsFound();
                 }
+                ready = true;
             });
         }
     }
@@ -163,7 +166,6 @@ function onWordsLoaded() {
     } else {
         noWordsFound();
     }
-    ready = true;
 }
 
 function binarySearch(arr, toSearch) {
@@ -272,6 +274,7 @@ function resetInput() {
     invalid.value = "";
     setUrlParam("input", "");
     setUrlParam("wrong", "");
+    ready = true;
 }
 
 function reloadPage() {
