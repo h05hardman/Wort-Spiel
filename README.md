@@ -1,4 +1,4 @@
-# Wort-Spiel
+# Wortspiel
 
 ## [English](https://asozialesnetzwerk.github.io/Hangman-Solver/en/):
 Looks through **90.539** english words to find a solution for your hangman game.
