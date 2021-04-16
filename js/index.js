@@ -1,8 +1,6 @@
 const input = document.getElementById("input");
-const invalid = document.getElementById("invalid");
 const letterOutput = document.getElementById("output");
 const wordOutput = document.getElementById("output2");
-const crosswordCheckbox = document.getElementById("crossword-mode");
 //only in german:
 const umlautCheckbox = isGerman() ? document.getElementById("has-umlauts") : null;
 
@@ -19,13 +17,6 @@ let lastWordLength = 0;
 let lastHasUmlauts = undefined;
 let words = [];
 
-function getInvalidChars() {
-    return ((isCrossWordMode() ? "" : input.value.replace(wildCardRegex, "")) + invalid.value)
-        .toLowerCase()
-        .replace(whiteSpaceRegex, "")
-        .replace(duplicateCharsRegex, "");
-}
-
 function getRegex() {
     const invalidChars = "[^" + getInvalidChars() + "]";
     const regexStr = input.value.toLowerCase().replace(wildCardRegex, (s) => {
@@ -40,10 +31,6 @@ function isGerman() {
 
 function hasUmlauts() {
     return isGerman() && umlautCheckbox.checked;
-}
-
-function isCrossWordMode() {
-    return crosswordCheckbox.checked;
 }
 
 function getWordsFolder() {
@@ -215,8 +202,6 @@ if (isGerman()) {
     umlautCheckbox.checked = getParamFromURL("umlauts", "f") === "t";
 }
 input.value = getParamFromURL("input", "");
-invalid.value = getParamFromURL("wrong", "");
-crosswordCheckbox.checked = getParamFromURL("cw", "f") === "t"
 
 function setUrlParam(param, value) {
     let newStr = param + "=" + encodeURIComponent(value);
@@ -242,10 +227,6 @@ if (isGerman()) {
     }
 }
 
-crosswordCheckbox.onchange = () => {
-    setUrlParam("cw",  isCrossWordMode() ? "t" : "");
-}
-
 input.onchange = () => {
     saveInput();
     updateWords();
@@ -260,13 +241,6 @@ function saveInput() {
 invalid.onchange = () => {
     saveInvalid();
     updateWords();
-}
-
-function saveInvalid() {
-    setUrlParam("wrong", invalid.value.toLowerCase()
-        .replace(whiteSpaceRegex, "")
-        .replace(wildCardRegex, "")
-        .replace(duplicateCharsRegex, ""));
 }
 
 function resetInput() {
