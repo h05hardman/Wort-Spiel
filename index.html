@@ -3,23 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="theme-color" content="#8B0000">
-    <meta id = "meta-id" property="og:title" content="Hangman-Solver">
-    <meta id = "meta-description" property="og:description" content="Eine Webseite, die dir bei Hangman hilft.">
+    <meta id = "meta-id" property="og:title" content="Wortspiel">
+    <meta id = "meta-description" property="og:description" content="Eine Webseite, die dir beim Wortspiel hilft.">
 
-    <title>Hangman-Solver</title>
+    <title>Wortspiel</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <label class="text-input-label no-select" for="input">Eingabe (Nutze "_" für nicht bekannte Buchstaben):</label>
+    <label class="text-input-label no-select" for="input">Eingabe des letzten Wortes:</label>
     <br>
     <input class="text-input" id="input">
-
-    <br>
-
-    <label class="text-input-label no-select" for="invalid">Falsche Buchstaben:</label>
-    <br>
-    <input class="text-input" id="invalid">
 
     <br><br>
 
@@ -30,15 +24,6 @@
             Erlaube Umlaute
         </label>
         <span class="tooltip-text no-select">Nutze ä, ö, ü & ß, anstatt ae, oe, ue & ss.</span>
-    </div>
-
-    <div class="tooltip no-select">
-        <label class="cbl float-left no-select" for="crossword-mode">
-            <input type="checkbox" class="cb no-select" id="crossword-mode" name="crossword">
-            <span class="checkmark no-select"></span>
-            Kreuzworträtselmodus
-        </label>
-        <span class="tooltip-text no-select">Die Buchstaben im Eingabefeld können auch an anderen Stellen erneut auftauchen.</span>
     </div>
 
 
